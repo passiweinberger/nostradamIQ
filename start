@@ -1,0 +1,26 @@
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+source env.sh
+vagrant up
+
+docker build -t catastrophe .
+
+docker run --name catastrophe-redis -d -p 0.0.0.0:6379:6379 redis
+
+docker run \
+  --name catastrophe-server \
+  --link catastrophe-redis:broker \
+  -e REDIS_HOST=broker \
+  -e API_KEY=AIzaSyC5rTfs7aWeFq8pBeFueZB97FCjTic4c5o \
+  -d \
+  -p 0.0.0.0:8080:8080 \
+  -w /opt/numenta/catastrophe/webapp \
+  catastrophe \
+  python serve.py
+
+docker run \
+  --link catastrophe-redis:broker \
+  -e REDIS_HOST=broker \
+  catastrophe \
+  python run.py

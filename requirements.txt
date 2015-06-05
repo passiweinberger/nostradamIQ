@@ -1,0 +1,6 @@
+gevent
+gevent-socketio
+redis
+numpy
+matplotlib
+scikit-learn
