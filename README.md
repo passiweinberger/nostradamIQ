@@ -12,7 +12,7 @@
 - [Redis](http://redis.io/) running locally
 - Python, and [dependencies](requirements.txt)
 - [Google Maps Javascript API Key](https://developers.google.com/maps/documentation/javascript/tutorial#api_key)
-- ### Possibly: 
+- Possibly: 
 - [Cerebro2](https://github.com/numenta/nupic.cerebro2)
 - MySQLdb
 - [PapaParse](http://papaparse.com/)
@@ -69,3 +69,10 @@ docker run \
 Redis, the catastrophe web service, and the catastrophe entry point are now running
 in separate containers in a vm.  You should be able to access the web service
 in a browser at [http://localhost:8080](http://localhost:8080)
+
+_________________________________________________________________________________
+Thanks to the NuPIC-Community, Austin Marshall, Lab75 and many more for help!
+
+This is part of a TEDx-Project. 
+I hope to make the world a saver place by making catastrophe-prediction more efficient.
+This may also lead to a nice tool for visualizing all kinds of natural phenomena...  
