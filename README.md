@@ -12,7 +12,7 @@
 - [Redis](http://redis.io/) running locally
 - Python, and [dependencies](requirements.txt)
 - [Google Maps Javascript API Key](https://developers.google.com/maps/documentation/javascript/tutorial#api_key)
-Possibly: 
+- ### Possibly: 
 - [Cerebro2](https://github.com/numenta/nupic.cerebro2)
 - MySQLdb
 - [PapaParse](http://papaparse.com/)
