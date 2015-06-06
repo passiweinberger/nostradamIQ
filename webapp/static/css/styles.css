@@ -35,6 +35,26 @@ html, body, #map-canvas, .container-fluid
     width: 300px;
 }
 
+/* stylize max_events box */
+#event_markers_length
+{
+    /* override typeahead.js's transparent background */
+    background-color: #ffffff;
+
+    /* text box's width */
+    width: 80px;
+}
+
+/* stylize CSVINPPUT box */
+#CSVINPUT
+{
+    /* override typeahead.js's transparent background */
+    background-color: #ffffff;
+
+    /* text box's width */
+    width: 110px;
+}
+
 /* stylize places' labels */
 .label
 {

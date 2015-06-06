@@ -157,6 +157,7 @@ for n, event in enumerate(events):
     modelInput["event"] = input_event
     modelInput["scalar"] = magnitude
     modelInput["timestamp"] = timestamp
+    # TODO: May reset the odel after some time?
     result = model.run(modelInput)
     model.save(MODELSTATE)
     print result
@@ -175,10 +176,10 @@ for n, event in enumerate(events):
     if not PREDICT or prediction == 'None':
       # Anomaly-Stats: 
       anomalyScore = result.inferences["anomalyScore"]
+      AnomalyScores.append(anomalyScore)
       # By default 0.5 for the first 600 iterations!
       likelihood = anomalyLikelihood.anomalyProbability(modelInput["event"], anomalyScore, modelInput["timestamp"])
       logLikelihood = anomalyLikelihood.computeLogLikelihood(likelihood)
-      AnomalyScores.append(anomalyScore)
       LikelihoodScores.append([modelInput["timestamp"], modelInput["event"], likelihood])
       prediction = 'None'
 

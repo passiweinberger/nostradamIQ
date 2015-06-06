@@ -42,7 +42,9 @@
           <form class="form-inline" id="form" role="form">
               <div class="form-group">
                   <label class="sr-only" for="q">City, State, Postal Code</label>
-                  <input class="form-control" id="q" placeholder="City, State, Postal Code" type="text"/>
+                  <input class="form-control" autocomplete="false" id="q" placeholder="City, State, Postal Code" type="text"/>
+                  <!-- Show only N Events -->
+                  <input class="form-control" autocomplete="false" id="event_markers_length" placeholder="# events" type="text" onchange="control_n_events();" />
                    <!-- Select a file to upload-->
                   <br/><input class="form-control" type="file" id="CSVINPUT" onchange="ValidateSingleInput(this);" />
               </div>

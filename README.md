@@ -42,7 +42,8 @@
 
 ## Usage via VM:
 
-Include your API-Keys in webapp/API_KEYS.py Download and install Docker client, Virtualbox, and Vagrant, and then:
+Include your API-Keys in webapp/API_KEYS.py (MAPS_API_KEY=< your API_KEY>) 
+Download and install Docker client, Virtualbox, and Vagrant, and then:
 
 ```
 source env.sh
@@ -75,7 +76,7 @@ Thanks to the NuPIC-Community, Austin, Lab75 and many more for help!
 
 This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/). 
 
-I hope to make the world a saver place by making catastrophe-prediction more efficient.
+The idea is to make the world a safer place by making catastrophe-prediction more efficient.
 This will also lead to a nice tool for visualizing all kinds of natural phenomena, easily searchable with a timescale and choosable info-layers. The core-feature, though, is going to be a layer showing the probabilyty for natural disasters determined by learning time and location based sequences and utilizing other tools like detecting anomal abnormal behavior, preassure and temperature anomalies and (hopefully) combining all to one useful and accurate prediction tool to help local governments and organisations to focus research and prepare for possible catastrophes.
 
 ### Let's use the technology of today and data from the past to make a better future for all!

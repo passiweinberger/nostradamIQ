@@ -207,7 +207,8 @@ MODEL_PARAMS = {
             # value.
             'permanenceDec' : 0.1,
 
-            'globalDecay': 0.0,
+            # TODO: check for sequences... 
+            'globalDecay': 0.001,
 
             'maxAge': 0,
 

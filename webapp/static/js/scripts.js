@@ -25,7 +25,7 @@ function ValidateSingleInput(oInput) {
     return true;
 }
 
-// Upload and read the csv File: TODO 
+// Upload and read the csv File: TODO: Throws: Uncaught TypeError: Cannot read property 'call' of undefined
 function upload_csv(oInput) {
     // Get the csv selected in the input CSVINPUT: http://papaparse.com/
     // var csvData = document.getElementById("CSVINPUT");
@@ -241,6 +241,20 @@ function removeMarkers()
     }
     //  empty array
     markers.length = 0;
+}
+
+// only showing nEvents events (no pun intended...:P)!
+function control_n_events() {
+    var nEvents = document.getElementById('event_markers_length').value;
+    if (nEvents != '') {
+        console.log("Displaying ", nEvents, " events!")
+        if (event_markers.length >= nEvents) {
+            // remove the first marker
+            event_markers[0].setMap(null);
+            event_markers[0] = null;
+            event_markers.length -= 1; 
+        }
+    }
 }
 
 /**
