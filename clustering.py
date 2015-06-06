@@ -114,7 +114,7 @@ def cluster(input_events):
 	print len_events
 
 	import subprocess
-	plt.show()
+	plt.show(block=False)
 		
 	print "Max. Longitudes: {maxLng} ; Min. Longitudes: {minLng}".format(maxLng=str(maxLongitudes), minLng=str(minLongitudes)) 
 	print "Max. Latitudes: {maxLat} ; Min. Latitudes: {minLat}\n".format(maxLat=str(maxLatitudes), minLat=str(minLatitudes))

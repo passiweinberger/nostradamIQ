@@ -19,6 +19,8 @@
 
 ## Usage
 
+Include your API-Keys in webapp/API_KEYS.py (MAPS_API_KEY=< your API_KEY>)
+
 - Start redis
 
   ```bash
@@ -35,7 +37,7 @@
 
   ```bash
   $ cd webapp
-  $ API_KEY=<insert API key here> python serve.py
+  $ python serve.py
   ```
 
 - Open [http://localhost:8080](http://localhost:8080) in browser

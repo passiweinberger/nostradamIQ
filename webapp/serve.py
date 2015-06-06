@@ -13,8 +13,9 @@ from API_KEYS import MAPS_API_KEY
 
 files = ['index.html', 'favicon.ico']
 
-CORS = ("Access-Control-Allow-Origin", "http://localhost:8080")
-# CORS_METHODS = ("Access-Control-Allow-Methods", "GET, POST, PUT") TODO
+CORS = ("Access-Control-Allow-Origin", "*") # http://localhost:8080
+CORS_METHODS = ("Access-Control-Allow-Methods", "GET, POST, PUT") #TODO
+CONNECTION = ("Connection", "keep-alive")
 
 def start_php_server(port_number):
   hostname = str("localhost:%s" %port_number)
@@ -45,12 +46,12 @@ class Application(object):
   def __call__(self, environ, start_response):
     path = environ['PATH_INFO'].strip('/') or 'index.html'
     
-    if path.endswith('.php'):
+    if '.php' in path:
       try:
         data = (open(path)
                     .read())
         content_type = "application/json"
-        start_response('200 OK', [('Content-Type', content_type), CORS])
+        start_response('200 OK', [('Content-Type', content_type), CORS, CORS_METHODS, CONNECTION])
         return [data]
       except Exception:
         return not_found(start_response)

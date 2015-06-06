@@ -178,8 +178,8 @@ for n, event in enumerate(events):
       # Anomaly-Stats: 
       anomalyScore = result.inferences["anomalyScore"]
       AnomalyScores.append(anomalyScore)
-      # By default 0.5 for the first 600 iterations!
-      likelihood = anomalyLikelihood.anomalyProbability(modelInput["event"], anomalyScore, modelInput["timestamp"])
+      # By default 0.5 for the first 600 iterations! TODO: Still not quite sure if that's alright...
+      likelihood = anomalyLikelihood.anomalyProbability(event[0] + numpy.array([event[1]]), anomalyScore, modelInput["timestamp"])
       logLikelihood = anomalyLikelihood.computeLogLikelihood(likelihood)
       LikelihoodScores.append([modelInput["timestamp"], modelInput["event"], likelihood])
       prediction = 'None'
@@ -208,7 +208,6 @@ for n, event in enumerate(events):
     print data
     print ""
     
-  # TODO: Get ValueError after 600iters; Probably related to AnomalityLikelihood / logLikelihood...
   except ValueError:
     print "\nValueError: \n" + str(event)
     pass

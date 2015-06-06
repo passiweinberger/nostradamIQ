@@ -210,8 +210,8 @@ MODEL_PARAMS = {
             # value.
             'permanenceDec' : 0.1,
 
-            # TODO: check for sequences... 
-            'globalDecay': 0.000001,
+            # TODO: earths tectonic changes slowly; check for sequences... 
+            'globalDecay': 0.0000001,
 
             'maxAge': 0,
 

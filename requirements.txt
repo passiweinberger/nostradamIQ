@@ -3,4 +3,5 @@ gevent-socketio
 redis
 numpy
 matplotlib
+request
 scikit-learn
