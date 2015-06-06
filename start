@@ -12,7 +12,6 @@ docker run \
   --name catastrophe-server \
   --link catastrophe-redis:broker \
   -e REDIS_HOST=broker \
-  -e API_KEY=AIzaSyC5rTfs7aWeFq8pBeFueZB97FCjTic4c5o \
   -d \
   -p 0.0.0.0:8080:8080 \
   -w /opt/numenta/catastrophe/webapp \
