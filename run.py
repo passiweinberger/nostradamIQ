@@ -157,7 +157,8 @@ for n, event in enumerate(events):
     modelInput["event"] = input_event
     modelInput["scalar"] = magnitude
     modelInput["timestamp"] = timestamp
-    # TODO: May reset the odel after some time?
+    # TODO: May reset the model after some time?
+    # TODO: May Cluster inputs for adjustable bins?
     result = model.run(modelInput)
     model.save(MODELSTATE)
     print result

@@ -197,7 +197,10 @@ MODEL_PARAMS = {
 
             # Initial Permanence
             # TODO: need better explanation
-            'initialPerm': 0.21,
+            'initialPerm': 0.31,
+
+            # Connected Permanence
+            'connectedPerm': 0.5,
 
             # Permanence Increment
             'permanenceInc': 0.1,
@@ -208,7 +211,7 @@ MODEL_PARAMS = {
             'permanenceDec' : 0.1,
 
             # TODO: check for sequences... 
-            'globalDecay': 0.001,
+            'globalDecay': 0.000001,
 
             'maxAge': 0,
 
@@ -223,7 +226,7 @@ MODEL_PARAMS = {
             # connected synapses that are active due to infActiveState
             # None=use default
             # Replaces: tpActivationThreshold
-            'activationThreshold': 12,
+            'activationThreshold': 12, # TODO: Play around with more comp. power for better value!
 
             'outputType': 'normal',
 
