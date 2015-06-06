@@ -14,7 +14,7 @@
 - [Google Maps Javascript API Key](https://developers.google.com/maps/documentation/javascript/tutorial#api_key)
 - Possibly: 
 - [Cerebro2](https://github.com/numenta/nupic.cerebro2)
-- MySQLdb
+- [MySQLdb](http://mysql-python.sourceforge.net/MySQLdb.html)
 - [PapaParse](http://papaparse.com/)
 
 ## Usage
@@ -42,7 +42,7 @@
 
 ## Usage via VM:
 
-Download and install Docker client, Virtualbox, and Vagrant, and then:
+Include your API-Keys in webapp/API_KEYS.py Download and install Docker client, Virtualbox, and Vagrant, and then:
 
 ```
 source env.sh
@@ -53,7 +53,6 @@ docker run \
   --name catastrophe-server \
   --link catastrophe-redis:broker \
   -e REDIS_HOST=broker \
-  -e API_KEY=$API_KEY \
   -d \
   -p 0.0.0.0:8080:8080 \
   -w /opt/numenta/catastrophe/webapp \
@@ -71,8 +70,8 @@ in separate containers in a vm.  You should be able to access the web service
 in a browser at [http://localhost:8080](http://localhost:8080)
 
 _________________________________________________________________________________
-Thanks to the NuPIC-Community, Austin Marshall, Lab75 and many more for help!
+Thanks to the NuPIC-Community, Austin, Lab75 and many more for help!
 
-This is part of a TEDx-Project. 
+This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/). 
 I hope to make the world a saver place by making catastrophe-prediction more efficient.
 This may also lead to a nice tool for visualizing all kinds of natural phenomena...  

@@ -9,7 +9,7 @@ from socketio.mixins import BroadcastMixin
 import redis
  
 
-from API_KEY import API_KEY
+from API_KEYS import MAPS_API_KEY
 
 files = ['index.html', 'favicon.ico']
 
@@ -59,7 +59,7 @@ class Application(object):
       try:
         data = (open(path)
                 .read()
-                .replace("https://maps.googleapis.com/maps/api/js?key=API_KEY", "https://maps.googleapis.com/maps/api/js?key=%s" % (API_KEY)))
+                .replace("https://maps.googleapis.com/maps/api/js?key=API_KEY", "https://maps.googleapis.com/maps/api/js?key=%s" % (MAPS_API_KEY)))
 
       except Exception:
         return not_found(start_response)
