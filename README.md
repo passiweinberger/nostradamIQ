@@ -69,9 +69,17 @@ Redis, the catastrophe web service, and the catastrophe entry point are now runn
 in separate containers in a vm.  You should be able to access the web service
 in a browser at [http://localhost:8080](http://localhost:8080)
 
-_________________________________________________________________________________
+_______________________________________________________________________________________________________________________________
+
 Thanks to the NuPIC-Community, Austin, Lab75 and many more for help!
 
 This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/). 
+
 I hope to make the world a saver place by making catastrophe-prediction more efficient.
-This may also lead to a nice tool for visualizing all kinds of natural phenomena...  
+This will also lead to a nice tool for visualizing all kinds of natural phenomena, easily searchable with a timescale and choosable info-layers. The core-feature, though, is going to be a layer showing the probabilyty for natural disasters determined by learning time and location based sequences and utilizing other tools like detecting anomal abnormal behavior, preassure and temperature anomalies and (hopefully) combining all to one useful and accurate prediction tool to help local governments and organisations to focus research and prepare for possible catastrophes.
+
+### Let's use the technology of today and data from the past to make a better future for all!
+
+"There are only patterns, patterns on top of patterns, patterns that affect other patterns. Patterns hidden by patterns. Patterns within patterns. 
+If you watch close, history does nothing but repeat itself." 
+-Someone smart 

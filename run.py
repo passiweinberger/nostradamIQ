@@ -148,7 +148,7 @@ for n, event in enumerate(events):
   z = int(10 * float(event.depth))
   # logarithmic scale for earthquakes... TODO: Encode for general Events, like air-pressure -> no log. scale...
   magnitude = int(10**float(event.mag))
-  radius = int(10*float(event.mag))
+  radius = int(10*float(event.mag)) # float(event.mag)
 
   try:
     input_event = (numpy.array([x, y, z]), radius)
