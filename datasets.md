@@ -5,8 +5,8 @@ ________________________________________________________________________________
 
 ### Earthquakes history:
 - [1008-1900](http://www.emidius.eu/GEH/)
-- [1900-2011](http://www.isc.ac.uk/iscgem/download.php) (Only recorded big magnitude)
-- [1900-2015](http://earthquake.usgs.gov/earthquakes/search/) (recorded all)
+- [1900-2011 (Only recorded big magnitude)](http://www.isc.ac.uk/iscgem/download.php) 
+- [1900-2015 (recorded all)](http://earthquake.usgs.gov/earthquakes/search/)
 - [current (csv)](http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php)
 - [current (geoJSON)](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
 
@@ -29,7 +29,6 @@ ________________________________________________________________________________
 ### [NLP for detection of anomal animal behavior](http://en.m.wikipedia.org/wiki/Earthquake_prediction#Animal_behavior)
 - [Twitter](https://dev.twitter.com/rest/reference/get/search/tweets)
 - [Facebook](https://developers.facebook.com/)
-
 - [For sharing/informing](https://docs.oneall.com/api/)
 
 
