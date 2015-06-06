@@ -1,7 +1,9 @@
 webapp/API_KEYS.py
+webapp/API_KEYS.py[cod]
 *.pyc
 webapp/*.pyc
 complete_NuCat.sql
 __pycache__/
 *.py[cod]
 webapp/*.py[cod]
+
