@@ -6,4 +6,7 @@ complete_NuCat.sql
 __pycache__/
 *.py[cod]
 webapp/*.py[cod]
+NLP/API_KEYS.py
+NLP/corpiri/old_trans
+NLP/old
 

@@ -1,4 +1,5 @@
-# Catastrophe
+# nostradamIQ - sensing our worlds disasters.
+## Modern tech & principles of our brain -> intuitive & intelligent tool for catastrophe prediction
 
 # THIS IS WORK IN PROGRESS! DO NOT JUDGE, BUT FEEL FREE TO HELP/SHARE etc. ;)
 

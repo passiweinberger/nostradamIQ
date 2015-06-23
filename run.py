@@ -103,7 +103,7 @@ if CLUSTERING:
   events, minLatitudes, maxLatitudes, minLongitudes, maxLongitudes = cluster(events)
 
 
-if PREDICT: import PREDICTmodel_params as model_params
+#if PREDICT: import PREDICTmodel_params as model_params
 
 else: import TESTmodel_params as model_params
 
@@ -118,10 +118,6 @@ model.enableInference({"predictedField": "event"}) # Predict not only event but 
 print "Model created!\n"
 
 # Get the Model-Classes:
-if PREDICT: 
-  from nupic.data.inference_shifter import InferenceShifter
-  shifter = InferenceShifter()
-
 anomalyLikelihood = AnomalyLikelihood()
 
 if (WINDOWSIZE != None): AnomalyScores = deque(numpy.ones(WINDOWSIZE), maxlen=WINDOWSIZE)  
@@ -151,7 +147,7 @@ for n, event in enumerate(events):
   radius = int(10*float(event.mag)) # float(event.mag)
 
   try:
-    input_event = (numpy.array([x, y, z]), radius)
+    input_event = (numpy.array([x, y, z]), radius) # for GCE: (float(radius), float(x), float(y), float(z))
     timestamp = datetime.datetime.strptime(event.time, "%Y-%m-%dT%H:%M:%S.%fZ")
     modelInput = {}
     modelInput["event"] = input_event
@@ -163,18 +159,7 @@ for n, event in enumerate(events):
     model.save(MODELSTATE)
     print result
 
-    if PREDICT:
-      # Handle Anomaly:
-      anomalyScore, likelihood, logLikelihood = 'None', 'None', 'None'
-      pred_result = shifter.shift(result)
-      if result.inferences["multiStepBestPredictions"][1]:
-        prediction = result.inferences["multiStepBestPredictions"][1]
-        print prediction
-      else:
-        prediction = 'None'
-
-
-    if not PREDICT or prediction == 'None':
+    if True: # not PREDICT or prediction == 'None': TODO
       # Anomaly-Stats: 
       anomalyScore = result.inferences["anomalyScore"]
       AnomalyScores.append(anomalyScore)
@@ -183,6 +168,16 @@ for n, event in enumerate(events):
       logLikelihood = anomalyLikelihood.computeLogLikelihood(likelihood)
       LikelihoodScores.append([modelInput["timestamp"], modelInput["event"], likelihood])
       prediction = 'None'
+
+    if PREDICT:
+      # Handle Anomaly:
+      anomalyScore, likelihood, logLikelihood = 'None', 'None', 'None'
+      # TODO!
+      # model.disable_learning()
+      # for spaceBin in spaceBins: # where spacebins is a NxNxD matrix of all 0's
+        # for magnitude in magnitudes: # where magnitudes is a scale of all possible mags in a certain resulution
+          #model.run() next time interval in the middle of the space bin with matching resulution!
+          #prediction[spaceBin][magnitude] = (1 - anomalyScore of this event) # Or a better metric?
 
 
     # NOTE: change mag to scalar -more general! -Typecasting for DB

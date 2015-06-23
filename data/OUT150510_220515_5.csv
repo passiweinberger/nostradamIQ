@@ -1,0 +1,1 @@
+iterCount,type,time,latitude,longitude,depth,scalar,AnomalyScore,AnomalyMean_Windowsize,AnomalyLikelihood,logLikelihood,place,id,prediction
