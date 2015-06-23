@@ -8,6 +8,8 @@ __pycache__/
 webapp/*.py[cod]
 NLP/API_KEYS.py
 NLP/API_KEYS.py[cod]
+NLP/*.py[cod]
+NLP/*.pyc
 NLP/corpiri/old_trans
 NLP/old
 
