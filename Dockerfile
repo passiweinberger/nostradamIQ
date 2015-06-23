@@ -1,4 +1,4 @@
 FROM numenta/nupic:latest
-ADD . /opt/numenta/catastrophe
-WORKDIR /opt/numenta/catastrophe
+ADD . /opt/numenta/nostradamIQ
+WORKDIR /opt/numenta/nostradamIQ
 RUN pip install -r requirements.txt

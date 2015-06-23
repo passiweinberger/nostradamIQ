@@ -4,22 +4,22 @@ docker rm $(docker ps -a -q)
 source env.sh
 vagrant up
 
-docker build -t catastrophe .
+docker build -t nostradamIQ .
 
-docker run --name catastrophe-redis -d -p 0.0.0.0:6379:6379 redis
+docker run --name nostradamIQ-redis -d -p 0.0.0.0:6379:6379 redis
 
 docker run \
-  --name catastrophe-server \
-  --link catastrophe-redis:broker \
+  --name nostradamIQ-server \
+  --link nostradamIQ-redis:broker \
   -e REDIS_HOST=broker \
   -d \
   -p 0.0.0.0:8080:8080 \
-  -w /opt/numenta/catastrophe/webapp \
-  catastrophe \
+  -w /opt/numenta/nostradamIQ/webapp \
+  nostradamIQ \
   python serve.py
 
 docker run \
-  --link catastrophe-redis:broker \
+  --link nostradamIQ-redis:broker \
   -e REDIS_HOST=broker \
-  catastrophe \
+  nostradamIQ \
   python run.py
