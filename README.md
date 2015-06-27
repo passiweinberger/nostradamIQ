@@ -16,7 +16,6 @@
 - Possibly: 
 - [Cerebro2](https://github.com/numenta/nupic.cerebro2)
 - [MySQLdb](http://mysql-python.sourceforge.net/MySQLdb.html)
-- [PapaParse](http://papaparse.com/)
 
 ## Usage
 
