@@ -7,10 +7,17 @@ ________________________________________________________________________________
 - [1008-1900](http://www.emidius.eu/GEH/)
 - [1900-2011 (Only recorded big magnitude)](http://www.isc.ac.uk/iscgem/download.php) 
 - [1900-2015 (recorded all)](http://earthquake.usgs.gov/earthquakes/search/)
+<<<<<<< HEAD
+- [Current (csv)](http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php)
+- [Current (geoJSON)](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
+- [Seismic](https://www.unavco.org/data/data.html)
+- [Mobile accelerometers](http://bayen.eecs.berkeley.edu/sites/default/files/journals/06470715.pdf)
+=======
 - [current (csv)](http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php)
 - [current (geoJSON)](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
 - [seismic](https://www.unavco.org/data/data.html)
 - [mobile accelerometers](http://bayen.eecs.berkeley.edu/sites/default/files/journals/06470715.pdf)
+>>>>>>> 0e7d4f6a0bc7d66dfa405fff1130255ef414e64d
 - [Topology](http://opentopo.sdsc.edu/gridsphere/gridsphere?cid=datasets)
 
 - [Thermal heat](http://www.heatflow.und.edu/data.html)
@@ -34,8 +41,18 @@ ________________________________________________________________________________
 - [Flowminder](http://www.flowminder.org/)
 - [PDC](http://www.pdc.org/)
 - [PDC-ATLAS](http://atlas.pdc.org/atlas/)
+<<<<<<< HEAD
+- [Geophysical Data-Map](http://maps.ngdc.noaa.gov/viewers/geophysics/)
+- [Natural World - Information](http://www.naturalearthdata.com/)
+- [Socioeconomical Data](http://sedac.ciesin.columbia.edu/)
 
 ### [NLP for detection of anomal animal behavior](http://en.m.wikipedia.org/wiki/Earthquake_prediction#Animal_behavior)
+- [Direct animal movement (MPI)](https://www.movebank.org/)
+- [Wildlife-Tracking](http://www.wildlifetracking.org/)
+=======
+
+### [NLP for detection of anomal animal behavior](http://en.m.wikipedia.org/wiki/Earthquake_prediction#Animal_behavior)
+>>>>>>> 0e7d4f6a0bc7d66dfa405fff1130255ef414e64d
 - [Twitter](https://dev.twitter.com/rest/reference/get/search/tweets)
 - [Twitter from archive.org](https://archive.org/details/twitterstream)
 - [Topsy](http://about.topsy.com/)
@@ -43,5 +60,10 @@ ________________________________________________________________________________
 - [For sharing/informing](https://docs.oneall.com/api/)
 
 
+<<<<<<< HEAD
+### Papers and Journals:
+- [European Hazards](http://www.natural-hazards-and-earth-system-sciences.net/index.html)
+=======
  
+>>>>>>> 0e7d4f6a0bc7d66dfa405fff1130255ef414e64d
 
