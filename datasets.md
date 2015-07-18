@@ -41,10 +41,13 @@ ________________________________________________________________________________
 - [Flowminder](http://www.flowminder.org/)
 - [PDC](http://www.pdc.org/)
 - [PDC-ATLAS](http://atlas.pdc.org/atlas/)
+- [GHIN](http://ghin.pdc.org/ghin/catalog/search/browse/browse.page)
 <<<<<<< HEAD
 - [Geophysical Data-Map](http://maps.ngdc.noaa.gov/viewers/geophysics/)
 - [Natural World - Information](http://www.naturalearthdata.com/)
 - [Socioeconomical Data](http://sedac.ciesin.columbia.edu/)
+- [Big-Data Europe](http://www.big-data-europe.eu/climate/)
+- [American Meterological Society](http://www.ametsoc.org/AMSedu/ECS/index.html)
 
 ### [NLP for detection of anomal animal behavior](http://en.m.wikipedia.org/wiki/Earthquake_prediction#Animal_behavior)
 - [Direct animal movement (MPI)](https://www.movebank.org/)

@@ -5,8 +5,6 @@
 
 
 
-
-
 ## Requirements
 
 - [NuPIC](https://github.com/numenta/nupic)
@@ -76,7 +74,9 @@ ________________________________________________________________________________
 
 Thanks to the NuPIC-Community, Austin, Lab75 and many more for help!
 
-This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/). 
+This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/); [their Bolg about this](http://datanauts.tedxrheinmain.de/blog/meanwhile-in-datanauts-country/).
+
+See the Pitch [![[here](www.youtube.com/watch?v=5eXk9V57-I0)](http://img.youtube.com/vi/5eXk9V57-I0/0.jpg)](http://www.youtube.com/watch?v=5eXk9V57-I0)!
 
 The idea is to make the world a safe place by making nostradamIQ-prediction more efficient.
 This will also lead to a nice tool for visualizing all kinds of natural phenomena, easily searchable with a timescale and choosable info-layers. The core-feature, though, is going to be a layer showing the probability for natural disasters determined by learning time and location based sequences and utilizing other tools like detecting anomal abnormal behavior, preassure and temperature anomalies and (hopefully) combining all to one useful and accurate prediction tool to help local governments and organisations to focus research and prepare for possible nostradamIQs.
