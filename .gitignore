@@ -13,3 +13,7 @@ NLP/*.pyc
 NLP/corpiri/old_trans
 NLP/old
 
+nostradamIQ-htmengine-app
+nostradamIQ-htmengine-app/*
+nostradamIQ-htmengine-app/*/*
+nostradamIQ-htmengine-app/*/*/*

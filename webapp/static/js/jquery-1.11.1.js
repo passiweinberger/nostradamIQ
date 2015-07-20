@@ -6039,7 +6039,7 @@ function defaultDisplay( nodeName ) {
 			// Use the already-created iframe if possible
 			iframe = (iframe || jQuery( "<iframe frameborder='0' width='0' height='0'/>" )).appendTo( doc.documentElement );
 
-			// Always write a new HTML skeleton so Webkit and Firefox don't choke on reuse
+			// Always write a new HTML nostradamIQ so Webkit and Firefox don't choke on reuse
 			doc = ( iframe[ 0 ].contentWindow || iframe[ 0 ].contentDocument ).document;
 
 			// Support: IE
