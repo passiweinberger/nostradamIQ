@@ -74,7 +74,7 @@ ________________________________________________________________________________
 
 Thanks to the NuPIC-Community, Austin, Lab75 and many more for help!
 
-This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/); [their Bolg about this](http://datanauts.tedxrheinmain.de/blog/meanwhile-in-datanauts-country/).
+This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/); [their Bolg about this COntest](http://datanauts.tedxrheinmain.de/blog/meanwhile-in-datanauts-country/) and [nostradamIQ's Blog entery](http://datanauts.tedxrheinmain.de/blog/nostradamiq/)!
 
 See the Pitch!
 
