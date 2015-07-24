@@ -77,6 +77,7 @@ Thanks to the NuPIC-Community, Austin, Lab75 and many more for help!
 This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/); [their Bolg about this](http://datanauts.tedxrheinmain.de/blog/meanwhile-in-datanauts-country/).
 
 See the Pitch!
+
 [![here: www.youtube.com/watch?v=5eXk9V57-I0](http://img.youtube.com/vi/5eXk9V57-I0/0.jpg)](http://www.youtube.com/watch?v=5eXk9V57-I0)
 
 The idea is to make the world a safe place by making nostradamIQ-prediction more efficient.
