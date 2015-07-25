@@ -2,7 +2,8 @@
 
 Thank you for your interest!
 Currently, one of the biggest issues is the gathering of datastreams... 
-If you have other ideas for YOUR contribution, please feel free to [contact us](mailto://passiweinberger@gmail.com)!
+If you have other ideas for YOUR contribution, please feel free to [contact us](mailto:passiweinberger@gmail.com)!
+
 Here is a quick and easy step-by-step guide about how you can help us make this project reality:
 
 ## Step 1:
