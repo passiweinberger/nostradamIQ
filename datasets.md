@@ -1,6 +1,6 @@
 # Gathering of datasets to be included into the models and/or visualizations:
 
-### Feel free to suggest other data sources that might be helpful to predict, or would just be nice to include in the visualization tool!
+### Feel free to suggest other data sources that might be helpful to predict, evaluate and visualize catastrophes!
 _______________________________________________________________________________________________________________________________
 
 ### Earthquakes history:
@@ -37,7 +37,7 @@ ________________________________________________________________________________
 - [Flowminder](http://www.flowminder.org/)
 - [PDC](http://www.pdc.org/)
 - [PDC-ATLAS](http://atlas.pdc.org/atlas/)
-- [GHIN](http://ghin.pdc.org/ghin/catalog/search/browse/browse.page)
+- [GHIN - Global Hazards Info Network](http://ghin.pdc.org/ghin/catalog/search/browse/browse.page)
 - [Geophysical Data-Map](http://maps.ngdc.noaa.gov/viewers/geophysics/)
 - [Natural World - Information](http://www.naturalearthdata.com/)
 - [Socioeconomical Data](http://sedac.ciesin.columbia.edu/)
@@ -57,3 +57,28 @@ ________________________________________________________________________________
 
 ### Papers and Journals:
 - [European Hazards](http://www.natural-hazards-and-earth-system-sciences.net/index.html)
+
+### List of data we need (global and reliable sources are strongly preferred!!!):
+- gnip.com or other (historical) Twitter-data provider
+- ocean surface tempature
+- iPhone/Android apps for seismology e.g. Shakemeter, iShake etc. (or velocity vectors)
+- Antarctic seismic observations
+- EUREF-Permanent-Network measuremeants 
+- Sea Stations Bouys
+- Yellowstone Caldera
+- GPS Velocity vectors (from mobile phones, GPS-Stations etc.)
+- Strain-Meters
+- Borehole-Strainmeters (resolution higher then 1/min)
+- Tilt-meters
+- Seismometer data
+- Crustal-deformation measurements
+- Ultra-low-frequency magnetic data
+- Earth magnetic field data
+- Anthropological & socioeconomical data (Population, wealth etc.)
+- Animal behavior (e.g. accelerometer gradient, GPS etc.)
+- Ocean surface tempature
+- Geophysical data (density, condctance etc.)
+- Anything else you consider useful for this project!
+
+### Please use [River-View](https://github.com/nupic-community/river-view) to collect data!
+[Here](https://github.com/nupic-community/river-view/wiki/Creating-a-River) is a step-by-step description on how to do it!
