@@ -30,7 +30,9 @@ ________________________________________________________________________________
 # Wie kann ich helfen? 
 
 Danke für dein Interesse!
-Derzeit ist eines der größten Probleme des Projektes, das Sammeln von Datenströmen ...
+Derzeit ist eines der größten Probleme des Projektes, das Sammeln von Datenströmen...
+Wenn Du andere Ideen oder Vorschäge hast wie DU uns am besten helfen kannst, bitte zögere nicht [Kontakt aufzunehmen](mailto:passiweinberger@gmail.com)!
+
 Hier ist eine schnelle und einfache Schritt-für-Schritt-Anleitung, wie DU uns helfen kannst nostradamIQ Wirklichkeit werden zu lassen:
 
 ## Schritt 1:
