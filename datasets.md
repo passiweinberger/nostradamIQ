@@ -36,6 +36,7 @@ ________________________________________________________________________________
 - [HDX](http://www.inform-index.org/)
 - [Flowminder](http://www.flowminder.org/)
 - [PDC](http://www.pdc.org/)
+- [PDC's REST interface](http://agsc.pdc.org/arcgis/rest/services/global/pdc_historical_hazards/MapServer)
 - [PDC-ATLAS](http://atlas.pdc.org/atlas/)
 - [GHIN - Global Hazards Info Network](http://ghin.pdc.org/ghin/catalog/search/browse/browse.page)
 - [Geophysical Data-Map](http://maps.ngdc.noaa.gov/viewers/geophysics/)
