@@ -37,7 +37,7 @@ ________________________________________________________________________________
 - [Earth-Systems-Research Lab - PSD](http://www.esrl.noaa.gov/psd/data/)
 - [WorldClim](http://www.worldclim.org/)
 - [INFORM](http://www.inform-index.org/)
-- [HDX](http://www.inform-index.org/)
+- [HDX](https://data.hdx.rwlabs.org/)
 - [reliefWeb](http://reliefweb.int/)
 - [Flowminder](http://www.flowminder.org/)
 - [PDC](http://www.pdc.org/)
