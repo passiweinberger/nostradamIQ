@@ -38,6 +38,7 @@ ________________________________________________________________________________
 - [WorldClim](http://www.worldclim.org/)
 - [INFORM](http://www.inform-index.org/)
 - [HDX](http://www.inform-index.org/)
+- [reliefWeb](http://reliefweb.int/)
 - [Flowminder](http://www.flowminder.org/)
 - [PDC](http://www.pdc.org/)
 - [PDC's REST interface](http://agsc.pdc.org/arcgis/rest/services/global/pdc_historical_hazards/MapServer)
