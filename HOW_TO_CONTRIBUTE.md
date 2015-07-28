@@ -6,6 +6,10 @@ If you have other ideas for YOUR contribution, please feel free to [contact us](
 
 Here is a quick and easy step-by-step guide about how you can help us make this project reality:
 
+## Step 0:
+You should be familiar with git and github in general, if you're not, you will be in a few minutes!
+[![Just watch the short tutorial here:  https://www.youtube.com/watch?v=Yc3PKaT1knU] (https://www.youtube.com/watch?v=Yc3PKaT1knU/0.jpg)](https://www.youtube.com/watch?v=Yc3PKaT1knU)
+
 ## Step 1:
 ### Find a dataset you want to work with [here](https://github.com/nupic-community/nostradamIQ/blob/master/datasets.md)!
 You can go with one of the suggested ones, or find your own - please keep in mind to only use reliable and open data. You are also encouraged to request data that is currently not open.
