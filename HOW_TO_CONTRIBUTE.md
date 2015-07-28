@@ -39,6 +39,10 @@ Wenn Du andere Ideen oder Vorschäge hast wie DU uns am besten helfen kannst, bi
 
 Hier ist eine schnelle und einfache Schritt-für-Schritt-Anleitung, wie DU uns helfen kannst nostradamIQ Wirklichkeit werden zu lassen:
 
+## Schritt 0:
+Du solltest wissen wie du mit Git und Github arbeitest, falls du dich noch nicht auskennst, wirst du es in ein paar Minuten draufhaben!
+[![Schau dir einfach das Tutorial hier an: https://www.youtube.com/watch?v=Yc3PKaT1knU] (https://img.youtube.com/vi/Yc3PKaT1knU/0.jpg)](https://www.youtube.com/watch?v=Yc3PKaT1knU)
+
 ## Schritt 1:
 ### Finde einen Datensatz mit dem Du arbeiten möchtest [hier](https://github.com/nupic-community/nostradamIQ/blob/master/datasets.md)!
 Du kannst mit einem der vorgeschlagenen arbeiten, oder Deinen eigenen finde - bitte habe jedoch im Hinterkopf nur zuverlässige und offene Daten zu verwenden. Du kannst natürlich auch derzeit geschlossene Daten anfragen, setze Dich vorher jedoch bitte mit uns in Kontakt! 
