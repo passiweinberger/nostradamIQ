@@ -54,6 +54,8 @@ ________________________________________________________________________________
 - [IPCC](http://www.ipcc-data.org/)
 - [GlobalWeather by TAMU](http://globalweather.tamu.edu/)
 - [Enigma](https://app.enigma.io)
+- [worldDisasterReport](http://worlddisastersreport.org/en/data/index.html)
+- [Red-Cross](https://www.ifrc.org/world-disasters-report-2014/data)
 
 ### [NLP for detection of anomal animal behavior](http://en.m.wikipedia.org/wiki/Earthquake_prediction#Animal_behavior)
 - [Direct animal movement (MPI)](https://www.movebank.org/)
