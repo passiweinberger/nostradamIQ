@@ -3,7 +3,7 @@
 # THIS IS WORK IN PROGRESS! DO NOT JUDGE, BUT FEEL FREE TO HELP/SHARE etc. ;)
 
  [![Join the chat at https://gitter.im/nupic-community/nostradamIQ](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nupic-community/nostradamIQ?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[<img src="https://nostradamiq.herokuapp.com/badge.svg">](https://nostradamiq.slack.com)[Slack-Team](https://nostradamiq.herokuapp.com)!
+[<img src="https://nostradamiq.herokuapp.com/badge.svg">](https://nostradamiq.slack.com)[Get invited for our Slack-Team!](https://nostradamiq.herokuapp.com)
 <script async defer src="https://nostradamiq.herokuapp.com/slackin.js?large"></script>
 
 ## [Help us](https://github.com/nupic-community/nostradamIQ/blob/master/HOW_TO_CONTRIBUTE.md)!
