@@ -1,5 +1,7 @@
 # How can I help?
 
+[Deutsche Version unten zu finden!]
+
 Thank you for your interest!
 Currently, one of the biggest issues is the gathering of datastreams... 
 If you have other ideas for YOUR contribution, please feel free to [contact us](mailto:passiweinberger@gmail.com)!
