@@ -8,7 +8,7 @@ Here is a quick and easy step-by-step guide about how you can help us make this 
 
 ## Step 0:
 You should be familiar with git and github in general, if you're not, you will be in a few minutes!
-[![Just watch the short tutorial here:  https://www.youtube.com/watch?v=Yc3PKaT1knU] (https://www.youtube.com/watch?v=Yc3PKaT1knU/0.jpg)](https://www.youtube.com/watch?v=Yc3PKaT1knU)
+[![Just watch the short tutorial here:  https://www.youtube.com/watch?v=Yc3PKaT1knU] (https://www.img.youtube.com/vi/Yc3PKaT1knU/0.jpg)](https://www.youtube.com/watch?v=Yc3PKaT1knU)
 
 ## Step 1:
 ### Find a dataset you want to work with [here](https://github.com/nupic-community/nostradamIQ/blob/master/datasets.md)!
