@@ -33,6 +33,7 @@ ________________________________________________________________________________
 - [NOAA](http://www.noaa.gov/)
 - [NOAA-NCEP](http://www.ncep.noaa.gov/)
 - [NCDC.NOAA](http://www.ncdc.noaa.gov/)
+- [NOAA MAP SELECTOR](http://gis.ncdc.noaa.gov/map/viewer/#app=cdo&cfg=cdo&theme=daily&layers=111&node=gis)
 - [Earth-Systems-Research Lab - PSD](http://www.esrl.noaa.gov/psd/data/)
 - [WorldClim](http://www.worldclim.org/)
 - [INFORM](http://www.inform-index.org/)
