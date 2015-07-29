@@ -4,7 +4,7 @@
 
 Thank you for your interest!
 Currently, one of the biggest issues is the gathering of datastreams... 
-If you have other ideas for YOUR contribution, please feel free to [contact us](mailto:info@nostradamiq.org)!
+If you have other ideas for YOUR contribution, please feel free to [contact us](mailto:pascal@nostradamiq.org)!
 
 Here is a quick and easy step-by-step guide about how you can help us make this project reality:
 
@@ -37,7 +37,7 @@ ________________________________________________________________________________
 
 Danke für dein Interesse!
 Derzeit ist eines der größten Probleme des Projektes, das Sammeln von Datenströmen...
-Wenn Du andere Ideen oder Vorschäge hast wie DU uns am besten helfen kannst, bitte zögere nicht [Kontakt aufzunehmen](mailto:passiweinberger@gmail.com)!
+Wenn Du andere Ideen oder Vorschäge hast wie DU uns am besten helfen kannst, bitte zögere nicht [Kontakt aufzunehmen](mailto:pascal@nostradamiq.org)!
 
 Hier ist eine schnelle und einfache Schritt-für-Schritt-Anleitung, wie DU uns helfen kannst nostradamIQ Wirklichkeit werden zu lassen:
 
