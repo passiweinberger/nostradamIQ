@@ -40,6 +40,7 @@ ________________________________________________________________________________
 - [HDX](https://data.hdx.rwlabs.org/)
 - [reliefWeb](http://reliefweb.int/)
 - [Flowminder](http://www.flowminder.org/)
+- [gapminder](http://www.gapminder.org/data/)
 - [PDC](http://www.pdc.org/)
 - [PDC's REST interface](http://agsc.pdc.org/arcgis/rest/services/global/pdc_historical_hazards/MapServer)
 - [PDC-ATLAS](http://atlas.pdc.org/atlas/)
