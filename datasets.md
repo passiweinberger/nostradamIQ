@@ -3,7 +3,7 @@
 ### Feel free to suggest other data sources that might be helpful to predict, evaluate and visualize catastrophes!
 _______________________________________________________________________________________________________________________________
 
-### Earthquakes history:
+### Gateways for Earth-monitoring APIs:
 - [1008-1900](http://www.emidius.eu/GEH/)
 - [1900-2011 (Only recorded big magnitude)](http://www.isc.ac.uk/iscgem/download.php) 
 - [1900-2015 (recorded all)](http://earthquake.usgs.gov/earthquakes/search/)
@@ -24,8 +24,6 @@ ________________________________________________________________________________
 - [Global Temperature Anomality](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=GISS_TA_M)
 - [Water vapor](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=MYDAL2_M_SKY_WV)
 - [Rainfall](http://neo.sci.gsfc.nasa.gov/view.php?datasetId=TRMM_3B43M)
-
-### Gateways for Earth-monitoring APIs: 
 - [NASA](https://data.nasa.gov/data?category=Earth%20Science&search=&type=)
 - [NEO](http://neo.sci.gsfc.nasa.gov/)
 - [ESA](https://earth.esa.int/web/guest/data-access/online-archives)
@@ -34,6 +32,7 @@ ________________________________________________________________________________
 - [EMBAT](http://www.emdat.be/world-map)
 - [NOAA](http://www.noaa.gov/)
 - [NOAA-NCEP](http://www.ncep.noaa.gov/)
+- [NCDC.NOAA](http://www.ncdc.noaa.gov/)
 - [Earth-Systems-Research Lab - PSD](http://www.esrl.noaa.gov/psd/data/)
 - [WorldClim](http://www.worldclim.org/)
 - [INFORM](http://www.inform-index.org/)
@@ -56,6 +55,8 @@ ________________________________________________________________________________
 - [Enigma](https://app.enigma.io)
 - [worldDisasterReport](http://worlddisastersreport.org/en/data/index.html)
 - [Red-Cross](https://www.ifrc.org/world-disasters-report-2014/data)
+- [RDA.UCAR](http://rda.ucar.edu/#!lfd?nb=y&b=all&v=Full+List)
+
 
 ### [NLP for detection of anomal animal behavior](http://en.m.wikipedia.org/wiki/Earthquake_prediction#Animal_behavior)
 - [Direct animal movement (MPI)](https://www.movebank.org/)
