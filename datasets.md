@@ -73,9 +73,9 @@ ________________________________________________________________________________
 ### Papers and Journals:
 - [European Hazards](http://www.natural-hazards-and-earth-system-sciences.net/index.html)
 
-### Viz tools:
+### Visualization tools:
 - [Stats-Silk](http://www.statsilk.com/software/statplanet)
-- 
+
 ### List of data we need (global and reliable sources are strongly preferred!!!):
 - gnip.com or other (historical) Twitter-data provider
 - ocean surface tempature
