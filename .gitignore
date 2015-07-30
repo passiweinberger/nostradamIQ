@@ -1,12 +1,19 @@
 *.*~
-webapp/API_KEYS.py
-webapp/API_KEYS.py[cod]
 *.pyc
-webapp/*.pyc
-complete_NuCat.sql
 __pycache__/
 *.py[cod]
-webapp/*.py[cod]
+
+demo_app/nostradamIQ/*.*~
+demo_app/nostradamIQ/webapp/API_KEYS.py
+demo_app/nostradamIQ/webapp/API_KEYS.py[cod]
+demo_app/nostradamIQ/*.pyc
+demo_app/nostradamIQ/webapp/*.pyc
+demo_app/nostradamIQ/complete_NuCat.sql
+demo_app/nostradamIQ/__pycache__/
+demo_app/nostradamIQ/*.py[cod]
+demo_app/nostradamIQ/webapp/*.py[cod]
+
+NLP/*.*~
 NLP/API_KEYS.py
 NLP/API_KEYS.py[cod]
 NLP/*.py[cod]
@@ -18,7 +25,6 @@ nostradamIQ-htmengine-app
 nostradamIQ-htmengine-app/*
 nostradamIQ-htmengine-app/*/*
 nostradamIQ-htmengine-app/*/*/*
-
 
 _dev
 _dev/*
