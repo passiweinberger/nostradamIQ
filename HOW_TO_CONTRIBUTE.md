@@ -48,6 +48,7 @@ Hier ist eine schnelle und einfache Schritt-für-Schritt-Anleitung, wie DU uns h
 
 ## Schritt 0:
 Du solltest wissen wie du mit Git und Github arbeitest, falls du dich noch nicht auskennst, wirst du es in ein paar Minuten draufhaben!
+
 [![Schau dir einfach das Tutorial hier an: https://www.youtube.com/watch?v=Yc3PKaT1knU] (https://img.youtube.com/vi/Yc3PKaT1knU/0.jpg)](https://www.youtube.com/watch?v=Yc3PKaT1knU)
 
 ## Schritt 1:
