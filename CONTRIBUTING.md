@@ -40,7 +40,7 @@ This is the framework that will make your contribution soo much easier! Just rea
 Just follow the insturctions [here](https://github.com/nupic-community/river-view/wiki/Creating-a-River) to build the river for your dataset! Consider looking at the [current rivers](https://github.com/nupic-community/river-view/tree/master/rivers) for inspiration and useful code-snippets!
 
 ## Step 5:
-### Tap yourself on your shoulder! Well done! Thank you for your contribution! 
+### Pat yourself on the back! Well done! Thank you for your contribution! 
 If you did not crate your Pull Request, do it now. If you want, you can tell us in there how we can thank you! You will have 140 characters to tell the world (almost) anything! This will be hosted on the nostradamIQ website once we're ready!
 
 _________________________________________________________________________________________________
