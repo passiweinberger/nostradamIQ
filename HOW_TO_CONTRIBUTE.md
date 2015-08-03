@@ -20,6 +20,7 @@ For further questions, see [Git's Docs](https://git-scm.com/docs)!
 
 [JavaScript](http://www.w3schools.com/js/) is a really easy-to-learn and generally useful language! If you don't know it, You'll learn it on the fly, no worries! Just see how some of the [current codes](https://github.com/nupic-community/river-view/tree/master/rivers) work and have a nice cheat-sheet like [this](http://www.cheatography.com/davechild/cheat-sheets/javascript/) at hand. 
 And Voil´a! Congrats! You're now set to start!
+
 ![And Voil´a! Congrats! You're now set to start!](https://github.com/nupic-community/nostradamIQ/blob/master/img/woohoo.png "And Voil´a! Congrats! You're now set to start!")
 
 ## Step 1:
@@ -59,6 +60,7 @@ Bei weiteren Fragen, siehe [Git's Docs](https://git-scm.com/docs)!
 
 [JavaScript](http://www.w3schools.com/js/) ist einfach zu lernen und super hilfreich und beliebt in vielen Bereichen! Wenn Du es noch nicht kennst, mach dir keine Sorgen, Du wirst es schnell während des Codens lernen! Schau dir einfach mal ein paar der [jetzigen Codes](https://github.com/nupic-community/river-view/tree/master/rivers) and und habe ein kleines Cheat-Sheet wie [dieses](http://www.cheatography.com/davechild/cheat-sheets/javascript/) greifbar! 
 Und Voil´a! Glückwunsch! Jetzt kannst Du durchstarten!
+
 ![Und Voil´a! Glückwunsch! Jetzt kannst Du durchstarten!](https://github.com/nupic-community/nostradamIQ/blob/master/img/woohoo.png "Und Voil´a! Glückwunsch! Jetzt kannst Du durchstarten!")
 
 ## Schritt 1:
