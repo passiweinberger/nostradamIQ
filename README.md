@@ -26,4 +26,4 @@ If you watch close, history does nothing but repeat itself."
 For Question, Ideas or anything else, do not hesitate to [get in touch](mailto:info@nostradamiq.org)!
 __________________________________________________________________________________________________________________
 
-Thanks to the NuPIC-Community, Austin, Lab75 and many more for help!
+Thanks to the NuPIC-Community, Matt, Austin, Lab75 and many more for help!
