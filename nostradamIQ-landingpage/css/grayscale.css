@@ -16,9 +16,6 @@
     font-style: normal;
 }
 
-
-
-
 @font-face {
     font-family: 'heroregular';
     src: url('../fonts/hero-webfont.eot');
@@ -58,9 +55,17 @@ h6 {
 
 p {
     margin: 0 0 25px;
+    font-family: 'herolight';
     font-size: 18px;
+    font-weight: normal;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+p b {
+    font-family: 'herolight';
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 @media(min-width:768px) {
@@ -92,6 +97,17 @@ a:focus {
     background-color: #000;
 }
 
+/* padding to add space to logo (on nav black nav bar) */
+.navbar-header {
+    padding: 9px 0 9px 9px;
+}
+
+@media(min-width:768px) {
+    .navbar-header {
+        padding: 9px 0;
+    }
+}
+
 /* --------------------- Logo ----------------- */
 .navbar-brand {
     padding: 0;
@@ -120,7 +136,15 @@ a:focus {
     font-family: 'heroregular';
 }
 
+/* ------------- nav elements ------------- */
+.nav {
+    margin-bottom: 0;
+    padding: 0;
+}
+
 .navbar-custom .nav li a {
+    padding: 26px 14px;
+    line-height: normal;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
@@ -174,10 +198,10 @@ a:focus {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 150px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro_bg_1.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -299,14 +323,61 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 100px;
+    padding-top: 200px !important;
 }
 
-.download-section {
+/* -------------------- panels ----------- */
+
+.panel-default {
+    border-color: #ddd;
+}
+
+.panel {
+    max-width: 800px; 
+    margin: 22px auto 22px auto;
+    background-color: #000;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.panel-default>.panel-heading {
+    color: #fff;
+    text-align: left;
+    background-color: #000;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom: 1px solid #E3000B;
+}
+
+.panel-title {
+    font-size: 18px;
+    text-transform: none;
+    color: #fff;
+    margin: 0;
+}
+
+.panel-body {
+    padding: 13px;
+}
+
+.panel-body p {
+    text-align: left;
+    line-height: 1.4;
+    margin: 0;
+}
+/* --------------------- */
+
+#help {
+    padding-top: 50px !important;
+}
+
+.help-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/intro_bg_1.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -314,18 +385,36 @@ a:focus {
     -o-background-size: cover;
 }
 
-#map {
+#partners {
+    padding-top: 110px !important
+}
+
+.banner-partner-sponsors li {
+    padding: 9px 15px;
+    margin: 0 10px 20px 10px;
+    font-size: 26px;
+    font-family: 'heroregular';
+    color: #000;
+    background-color: #E3000B;
+}
+
+#contact {
+    padding-top: 110px !important;
+}
+
+/* #map {
     width: 100%;
     height: 200px;
     margin-top: 100px;
 }
+*/
 
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
     }
 
-    .download-section {
+    .help-section {
         padding: 100px 0;
     }
 
@@ -346,21 +435,25 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
+    border: 1px solid #E3000B;
+    color: #E3000B;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #42dca3;
+    border: 1px solid #E3000B;
     outline: 0;
     color: #000;
-    background-color: #42dca3;
+    background-color: #E3000B;
 }
 
 ul.banner-social-buttons {
     margin-top: 0;
+}
+
+ul.banner-social-buttons li {
+    margin-bottom: 20px;
 }
 
 @media(max-width:1199px) {
