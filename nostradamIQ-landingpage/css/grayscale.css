@@ -201,7 +201,7 @@ a:focus {
     padding: 150px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro_bg_1.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro_bg_4.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -377,7 +377,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/intro_bg_1.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro_bg_3.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -396,6 +396,7 @@ a:focus {
     font-family: 'heroregular';
     color: #000;
     background-color: #E3000B;
+    
 }
 
 #contact {
