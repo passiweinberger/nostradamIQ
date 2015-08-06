@@ -7,6 +7,7 @@
 <script async defer src="https://nostradamiq.herokuapp.com/slackin.js?large"></script>
 
 ## [Help us](https://github.com/nupic-community/nostradamIQ/blob/master/CONTRIBUTING.md)!
+And visit our [Webpage](http://nostradamiq.org/landing)!
 
 This is part of a [TEDx-Project](http://datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/); [their Blog about this Contest](http://datanauts.tedxrheinmain.de/blog/meanwhile-in-datanauts-country/) and [nostradamIQ's Blog entery](http://datanauts.tedxrheinmain.de/blog/nostradamiq/)!
 
