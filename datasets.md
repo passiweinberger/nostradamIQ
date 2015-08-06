@@ -61,6 +61,8 @@ ________________________________________________________________________________
 - [worldDisasterReport](http://worlddisastersreport.org/en/data/index.html)
 - [Red-Cross](https://www.ifrc.org/world-disasters-report-2014/data)
 - [RDA.UCAR](http://rda.ucar.edu/#!lfd?nb=y&b=all&v=Full+List)
+- [IRIS](http://www.iris.edu/hq/)
+- [REV](http://rev.seis.sc.edu/stations.html)
 
 
 ### [NLP for detection of anomal animal behavior](http://en.m.wikipedia.org/wiki/Earthquake_prediction#Animal_behavior)
