@@ -202,7 +202,7 @@ a:focus {
     padding: 150px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro_bg_4.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro_bg.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -433,6 +433,18 @@ a:focus {
     background-image: url(../img/intro_bg_2.jpg);
 }
 
+#tsunami {
+    background-image: url(../img/resources_tsunami.jpg);
+}
+
+#flood {
+    background-image: url(../img/resources_flood.jpg);
+}
+
+#volcanoes {
+    background-image: url(../img/resources_volcanoe.jpg);
+}
+
 @media(min-width:768px) {
     .resources-intro {
         display: table;
@@ -557,7 +569,7 @@ a:focus {
 .btn-default {
     border: 1px solid #E3000B;
     color: #E3000B;
-    background-color: transparent;
+    background-color: #000;
 }
 
 .btn-default:hover,
