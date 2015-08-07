@@ -34,6 +34,8 @@ body {
     font-family: 'herolight';
     color: #fff;
     background-color: #000;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 html {
@@ -420,6 +422,16 @@ a:focus {
 #contact {
     padding-top: 110px !important;
 }
+
+/* --------------------- contact form ------------- */
+#submit {
+    color: #BF0009;
+}
+
+
+/* --------------------- Share Buttons ------------- */
+
+
 
 /* -------------------- resources ----------------- */
 
