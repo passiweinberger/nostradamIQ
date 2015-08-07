@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <title>nostradam<i>IQ</i> - sensing our World's disasters</title>
+    <title>nostradamIQ - sensing our World's disasters</title>
     
     <link rel="shortcut icon" href="//nostradamiq.org/landing/img/favicon.ico?v=2" />
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="//nostradamiq.org/landing/img/apple-touch-icon-57x57.png" />
@@ -42,6 +42,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Share Buttons -->
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "709fb5b5-5b4a-4b63-b4b4-0a88e5bbed79", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+    <!-- End Share Buttons -->
 
 </head>
     
@@ -79,7 +85,7 @@
                         <a class="page-scroll" href="#learn">Learn</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#partners">Partners</a>
+                        <a class="page-scroll" href="#partners">Contributors</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Join us</a>
@@ -212,13 +218,28 @@
     <section id="partners" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Partners + Sponsors</h2>
+                <h2>Contributors, Partners + Sponsors</h2>
                 <ul class="list-inline banner-partner-sponsors">
-                    <li><a href="http://www.ibm.com/en-us/homepage-c.html" target="_blank" class="btn btn-default btn-lg">IBM</a></li>
-                    <li><a href="http://www.sas.com/en_us/home.html" target="_blank" class="btn btn-default btn-lg">SAS</a></li>
-                    <li><a href="http://hello.tedxrheinmain.de/" target="_blank" class="btn btn-default btn-lg">TEDx</a></li>
-                    <li><a href="http://lab75.jp" target="_blank" class="btn btn-default btn-lg">Lab75</a></li>
-                    <li><a href="http://www.pdc.org/" target="_blank" class="btn btn-default btn-lg">PDC</a></li>
+                    <li>
+                        <a href="http://numenta.org/" target="_blank" class="btn btn-default btn-lg"><img src="//nostradamiq.org/landing/img/Numenta.jpg" alt="Numenta" width="200" height="200"></img></a></li>
+                    <li>
+                        <a href="http://www.ibm.com/en-us/homepage-c.html" target="_blank" class="btn btn-default btn-lg"><img src="//nostradamiq.org/landing/img/IBM.png" alt="IBM" width="200" height="200"></img></a>
+                    </li>
+                    <li>
+                        <a href="http://www.sas.com/en_us/home.html" target="_blank" class="btn btn-default btn-lg"><img src="//nostradamiq.org/landing/img/SAS.png" alt="SAS" width="200" height="200"></img></a>
+                    </li>
+                    <li>
+                        <a href="http://hello.tedxrheinmain.de/" target="_blank" class="btn btn-default btn-lg"><img src="//nostradamiq.org/landing/img/TEDx.png" alt="TEDx" width="200" height="200"></img></a>
+                    </li>
+                    <li>
+                        <a href="http://lab75.jp" target="_blank" class="btn btn-default btn-lg"><img src="//nostradamiq.org/landing/img/Lab75.png" alt="Lab75" width="200" height="200"></img></a>
+                    </li>
+                    <li>
+                        <a href="http://www.pdc.org/" target="_blank" class="btn btn-default btn-lg"><img src="//nostradamiq.org/landing/img/PDC.png" alt="PDC" width="200" height="200"></img></a>
+                    </li>
+                    <li>
+                        <a href="http://nostradamiq.org/landing/contributors.html" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-users fa-5x"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -244,7 +265,70 @@
                     <li>
                         <a href="//datanauts.tedxrheinmain.de/contest-submissions/natural-catashtrophies-prediction-system/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-external-link-square fa-fw"></i> <span class="network-name">Find us on TEDx!</span></a>
                     </li>
+                    <li>
+                        <a href="//twitter.com/nostradamIQ" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Tweet Us!</span></a>
+                    </li>
                 </ul>
+
+                <!-- Contact from for users to mail us immediately -->
+                <form id="contact-form" class="form-horizontal" role="form" method="post" action="contact_form.php">
+                    <div class="form-group">
+                        <p><strong>Or write us just here!</strong></p>
+                        <span class="col-md-1 col-md-offset-1 text-center"><i class="fa fa-user bigicon"></i></span>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="First and Last Name" value="">
+                            <?php echo $errName;?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-md-1 col-md-offset-1 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email: example@domain.com" value="">
+                            <?php echo $errEmail;?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-md-1 col-md-offset-1 text-center"><i class="fa fa-heart-o bigicon"></i></span>
+                        <div class="col-sm-10">
+                            <select id="subject" name="subject" class="form-control">
+                                <option value="ContributeData">I want to help you gather Data!</option>
+                                <option value="ContributeFunding">I want to become a Sponsor!</option>
+                                <option value="ContributeTranslator">I want to help you translate!</option>
+                                <option value="ContributeCommunication">I want to help as a Communicator!</option>
+                                <option value="ContributeSpecial">I want to help in a different way!</option>
+                                <option value="Question">I have a question!</option>
+                                <option value="BugReport">I found a Bug!</option>
+                                <option value="JustTalking">I just want to talk!</option>
+                                <option value="PressRequest">I am a Journalist!</option>
+                            </select>
+                            <?php echo $errIssue;?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-md-1 col-md-offset-1 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="4" id="message" name="message" placeholder="Tell us how You can contribute, or how we can help You!"></textarea>
+                            <?php echo $errMessage;?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="human" name="human" placeholder="You can do this!">
+                            <?php echo $errHuman;?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <input id="submit" name="submit" type="submit" value="SEND" class="form-control btn-large" >
+                        </div>
+                    </div>
+                    <div id="contact-result" class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <?php echo $result; ?>
+                        </div>
+                    </div>
+                </form> 
             </div>
         </div>
     </section>
@@ -254,6 +338,30 @@
      -->
     <!-- Footer -->
     <footer>
+        <div class="container text-center">
+            <p>Sharing is Caring!<i class="fa fa-heart fa-3x fa-pulse"></i></p>
+            </br>
+            <!-- Share Buttons -->
+            <span class='st_sharethis_large' displayText='ShareThis'></span>
+            <span class='st_facebook_large' displayText='Facebook'></span>
+            <span class='st_twitter_large' displayText='Tweet'></span>
+            <span class='st_twitterfollow_large' displayText='Twitter Follow' st_username='nostradamIQ'></span>
+            <span class='st_whatsapp_large' displayText='WhatsApp'></span>
+            <span class='st_fblike_large' displayText='Facebook Like'></span>
+            <span class='st_reddit_large' displayText='Reddit'></span>
+            <span class='st_google_bmarks_large' displayText='Bookmarks'></span>
+            <span class='st_googleplus_large' displayText='Google+'></span>
+            <span class='st_email_large' displayText='Email'></span>
+            <span class='st_linkedin_large' displayText='LinkedIn'></span>
+            <span class='st_xing_large' displayText='Xing'></span>
+            <span class='st_pinterest_large' displayText='Pinterest'></span>
+            <span class='st_google_large' displayText='Google'></span>
+            <span class='st_print_large' displayText='Print'></span>
+            <span class='st_google_translate_large' displayText='Google Translate'></span>
+            <iframe src="https://ghbtns.com/github-btn.html?user=nupic-community&repo=nostradamIQ&type=star&count=false&size=large" frameborder="0" scrolling="0" width="120px" height="30px"></iframe>
+            <!-- End Share Buttons -->
+        </div>
+        </br></br>
         <div class="container text-center">
             <p>Copyright <i class="fa fa-copyright fa-fw"></i> nostradamIQ 2015</p>
             <p><a href="//nostradamiq.org/terms_of_service.html">Terms of Service</a></p>
@@ -270,7 +378,7 @@
     <script src="js/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ 
-    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=true"></script>
     -->
 
     <!-- Custom Theme JavaScript -->
@@ -278,20 +386,20 @@
 
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
-    var sc_project=10558768; 
+    var sc_project=10561930; 
     var sc_invisible=1; 
-    var sc_security="2f07478d"; 
+    var sc_security="50bb9ac0"; 
     var scJsHost = (("https:" == document.location.protocol) ?
     "https://secure." : "http://www.");
     document.write("<sc"+"ript type='text/javascript' src='" +
     scJsHost+
     "statcounter.com/counter/counter.js'></"+"script>");
     </script>
-    <noscript><div class="statcounter"><a title="shopify
-    analytics" href="http://statcounter.com/shopify/"
-    target="_blank"><img class="statcounter"
-    src="http://c.statcounter.com/10558768/0/2f07478d/1/"
-    alt="shopify analytics"></a></div></noscript>
+    <noscript><div class="statcounter"><a title="web counter"
+    href="http://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="http://c.statcounter.com/10561930/0/50bb9ac0/1/"
+    alt="web counter"></a></div></noscript>
     <!-- End of StatCounter Code for Default Guide -->
 
 </body>
