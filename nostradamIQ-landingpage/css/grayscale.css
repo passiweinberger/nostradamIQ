@@ -31,7 +31,7 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: 'herolight';
+    font-family: 'heroregular';
     color: #fff;
     background-color: #000;
     overflow: hidden;
@@ -55,6 +55,16 @@ h6 {
     letter-spacing: 1px;
 }
 
+h1 i {
+    color: #e3000b;
+    font-style: normal;
+}
+
+h2 i {
+    color: #e3000b;
+    font-style: normal;
+}
+
 p {
     margin: 0 0 25px;
     font-family: 'heroregular';
@@ -65,7 +75,7 @@ p {
 }
 
 p b {
-    font-family: 'herolight';
+    font-family: 'heroregular';
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -436,13 +446,42 @@ a:focus {
 /* -------------------- resources ----------------- */
 
 .resources-intro {
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-attachment: scroll;
+    width: 100%;
+    height: 0;
+    margin-top: 60px;
+    padding-bottom: 75%;
+}
+
+@media(min-width:768px) {
+    .resources-intro {
+        display: table;
+        width: 100%;
+        height: 0;
+        max-width: 1250px;
+        margin: 60px auto;
+        padding-bottom: 75%;
+        text-align: center;
+        color: #fff;
+        background-color: #000;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+}
+
+@media(min-width:1250px) {
+    .resources-intro {
+        height: 938px !important;
+        padding-bottom: 0 !important;
+    }
 }
 
 #supply-kit-intro {
-    background-image: url(../img/intro_bg_2.jpg);
+    background-image: url(../img/intro_bg.jpg);
 }
 
 #tsunami {
@@ -457,24 +496,6 @@ a:focus {
     background-image: url(../img/resources_volcanoe.jpg);
 }
 
-@media(min-width:768px) {
-    .resources-intro {
-        display: table;
-        width: 100%;
-        height: auto;
-        max-width: 1250px;
-        margin: 0 auto;
-        padding: 300px 0;
-        text-align: center;
-        color: #fff;
-        background-color: #000;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-}
-
 .banner-resources-buttons {
     margin: 0 0 30px 0;
     text-align: center !important;
@@ -485,13 +506,31 @@ a:focus {
 }
 
 #resources {
+    margin-top: -300px;
     max-width: 800px;
     padding-top: 10px !important;
     text-align: left;
 }
 
+@media(max-width:768px) {
+    #resources {
+        margin-top: -200px;
+        max-width: 800px;
+        padding-top: 10px !important;
+        text-align: left;
+    }
+    
+    #resources h1 {
+        margin-bottom: 100px !important;
+    }
+}
+
 #resources h1 {
+    width: auto;
+    padding: 10px;
     text-align: center;
+    margin-bottom: 200px;
+    background-color: rgba(102,0,0,0.7);
 }
 
 #resources h3 {
@@ -660,7 +699,7 @@ body {
 }
 
 #contributors-intro {
-    background-image: url(../img/intro_bg_2.jpg);
+    background-image: url(../img/intro_bg.jpg);
 }
 
 @media(min-width:768px) {
@@ -681,14 +720,18 @@ body {
     }
 }
 
-
 #contributors {
     max-width: 800px;
     padding-top: 10px !important;
     text-align: left;
 }
 
-#contributors   text-align: center;
+#contributors { 
+    text-align: left;
+}
+
+#contributors h1 { 
+    text-align: center;
 }
 
 #contributors h3 {
@@ -845,7 +888,7 @@ body {
 #terms p {
     margin: 0 0 20px 0;
     text-align: left;
-    font-family: 'herolight';
+    font-family: 'heroregular';
     font-weight: normal;
     font-size: 16px;
     letter-spacing: 1px;
