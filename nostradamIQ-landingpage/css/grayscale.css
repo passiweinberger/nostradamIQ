@@ -517,10 +517,10 @@ a:focus {
     right: auto;
     bottom: -10px;
     background-color: #000;
-    transition: margin 0.5s;
-    -webkit-transition: margin 0.5s;
-    -moz-transition: margin 0.5s;
-    -o-transition: margin 0.5s;
+    transition: margin 0.5s ease-in-out;
+    -webkit-transition: margin 0.5s ease-in-out;
+    -moz-transition: margin 0.5s ease-in-out;
+    -o-transition: margin 0.5s ease-in-out;
 }
 
 .show-share-buttons {
@@ -578,7 +578,7 @@ a:focus {
     background-color: #cc2127;
 }
 
-@media(min-width:820px) {
+@media(min-width:825px) {
     .share-buttons {
         width: auto;
         padding: 0;
@@ -590,10 +590,10 @@ a:focus {
         right: 0;
         bottom: auto;
         background-color: transparent;
-        transition: margin 0.5s;
-        -webkit-transition: margin 0.5s;
-        -moz-transition: margin 0.5s;
-        -o-transition: margin 0.5s;
+        transition: margin 0.5s ease-in-out;
+        -webkit-transition: margin 0.5s ease-in-out;
+        -moz-transition: margin 0.5s ease-in-out;
+        -o-transition: margin 0.5s ease-in-out;
     }
     
     .show-share-buttons {
@@ -658,7 +658,6 @@ a:focus {
         color: #fff;
     }
 }
-
 
 /* -------------------- resources ----------------- */
 
@@ -854,6 +853,11 @@ ul.banner-social-buttons {
 
 ul.banner-social-buttons li {
     margin-bottom: 20px;
+}
+
+ul.banner-social-buttons li a {
+    max-width: 100% !important;
+    white-space: normal;
 }
 
 @media(max-width:1199px) {
