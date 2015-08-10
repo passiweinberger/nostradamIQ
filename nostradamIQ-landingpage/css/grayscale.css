@@ -465,6 +465,10 @@ a:focus {
     background-color: #000;
 }
 
+.form-horizontal {
+    margin-top: 80px;
+}
+
 #submit:hover {
     background-color: #e3000b;
     color: #000;
@@ -547,7 +551,6 @@ a:focus {
     line-height: 50px;
     text-decoration: none;
     color: #fff;
-    text-decoration: none;
     background-color: #888;
 }
 
@@ -581,6 +584,23 @@ a:focus {
 
 .share-buttons #print {
     display: none;
+}
+
+@media(max-width:505px) {
+    .share-buttons ul {
+        padding: 0;    
+    }
+    
+    .share-buttons ul li {
+        display: inline-block;
+        font-size: 20px
+    }
+    
+    .share-buttons ul li a {
+        padding: 9px 9px;
+        line-height: 50px;
+        text-decoration: none;
+    }
 }
 
 @media(min-width:825px) {
@@ -888,7 +908,7 @@ ul.banner-social-buttons li a {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 100px 0 100px 0 !important;
 }
 
 footer p {
