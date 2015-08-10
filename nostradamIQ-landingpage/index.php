@@ -302,21 +302,112 @@
                     </li>
                 </ul>
                 
-                <!-- Contact form for users to mail us immediately -->
+<?php
+
+    // set var to input
+    $name = isset($_POST["name"]) ? $_POST["name"] : "";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+    $subject = isset($_POST["subject"]) ? $_POST["subject"] : "";
+    $message = isset($_POST["message"]) ? $_POST["message"] : "";
+    $human = isset($_POST["human"]) ? $_POST["human"] : "";
+    $from = 'nostradamiq.org LandingPage ContactForm'; 
+    $to = 'info@nostradamiq.org'; 
+    // Render Body:
+    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
+    // own var for every single input
+    $formname = "<div class='form-group'>
+                        <p>Or write us just here!</p>
+                        <label for='name' class='col-sm-2 control-label'><i class='fa fa-user fa-fw'></i></label>
+                        <div class='col-sm-9'>
+                            <input type='text' class='form-control' id='name' name='name' placeholder='First and Last Name' maxlength='50' value='$name'>";
+                         
+    $formemail = "</div>
+                    </div>
+                 
+                 <div class='form-group'>
+                        <label for='email' class='col-sm-2 control-label'><i class='fa fa-envelope-o fa-fw'></i></label>
+                        <div class='col-sm-9'>
+                            <input type='email' class='form-control' id='email' name='email' placeholder='Your Email: example@domain.com' maxlength='100' value='$email'>";
+                            
+    $formsubject = "</div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='subject' class='col-sm-2 control-label'><i class='fa fa-heart-o fa-fw'></i></label>
+                        <div class='col-sm-9'>
+                            <select id='subject' name='subject' class='form-control'>
+                                <option value='ContributeData'>I want to help you gather Data!</option>
+                                <option value='ContributeFunding'>I want to become a Sponsor!</option>
+                                <option value='ContributeTranslator'>I want to help you translate!</option>
+                                <option value='ContributeCommunication'>I want to help as a Communicator and Social Media!</option>
+                                <option value='COntributeContent'>I am an Expert and want to help with Content!</option>
+                                <option value='ContributeSpecial'>I want to help in a different way!</option>
+                                <option value='Question'>I have a question!</option>
+                                <option value='BugReport'>I found a Bug!</option>
+                                <option value='JustTalking'>I just want to talk!</option>
+                                <option value='PressRequest'>I am a Journalist!</option>
+                            </select>";
+                            
+    $formmessage = "</div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='message' id='messagelabel' class='col-sm-2 control-label'><i class='fa fa-pencil-square-o fa-fw'></i></label>
+                        <div class='col-sm-9'>
+                            <textarea class='form-control' rows='4' id='message' name='message' max-length='5000' placeholder='Tell us how You can contribute, or how we can help You!'>" . $message . "</textarea>";
+                            
+    $formhuman = "</div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='human' class='col-sm-2 control-label'>2 + 3 = ?</label>
+                        <div class='col-sm-9'>
+                            <input type='text' class='form-control' id='human' name='human' placeholder='You can do this!' maxlength='1'>";
+
+    // form as var
+    $form = "<form id='contact-form' class='form-horizontal' role='form' method='post' action='index.php#contact'>" . $formname . " " . $formemail . " " . $formsubject . " " . $formmessage . " " . $formhuman . "</div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='col-sm-9 col-sm-offset-2'>
+                            <input id='submit' name='submit' type='submit' value='SEND' class='form-control btn-large'>
+                        </div>
+                    </div>
+                    <div id='contact-result' class='form-group'>
+                        <div class='col-sm-10 col-sm-offset-2'>
+                            
+                        </div>
+                    </div>
+                </form>";
+
+                       
+    // form submitted?
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        // check input
+        if ($human == 5) {
+            mail ($to, $subject, $body, $from);
+            echo "<div class='alert alert-success'>Thank You! We will be in touch with You soon!</div>";
+        } else {
+            echo " " . $form . "<div class='alert alert-danger'>Sorry there was an error sending your message. Please try again later</div>";
+        }        
+    } else {
+        echo $form;  
+    };
+
+?>
+
+                <!-- Contact form for users to mail us immediately 
                 <form id="contact-form" class="form-horizontal" role="form" method="post" action="contact_form.php">
                     <div class="form-group">
                         <p>Or write us just here!</p>
                         <label for="name" class="col-sm-2 control-label"><i class="fa fa-user fa-fw"></i></label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="name" name="name" placeholder="First and Last Name" maxlength="50" value="">
-                            <?php echo $errName;?>
+                         
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label"><i class="fa fa-envelope-o fa-fw"></i></label>
                         <div class="col-sm-9">
                             <input type="email" class="form-control" id="email" name="email" placeholder="Your Email: example@domain.com" maxlength="100" value="">
-                            <?php echo $errEmail;?>
+                            
                         </div>
                     </div>
                     <div class="form-group">
@@ -334,21 +425,21 @@
                                 <option value="JustTalking">I just want to talk!</option>
                                 <option value="PressRequest">I am a Journalist!</option>
                             </select>
-                            <?php echo $errIssue;?>
+                            
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message" id="messagelabel" class="col-sm-2 control-label"><i class="fa fa-pencil-square-o fa-fw"></i></label>
                         <div class="col-sm-9">
                             <textarea class="form-control" rows="4" id="message" name="message" placeholder="Tell us how You can contribute, or how we can help You!"></textarea>
-                            <?php echo $errMessage;?>
+                            
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="human" name="human" placeholder="You can do this!" maxlength="1">
-                            <?php echo $errHuman;?>
+                            
                         </div>
                     </div>
                     <div class="form-group">
@@ -358,10 +449,10 @@
                     </div>
                     <div id="contact-result" class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
-                            <?php echo $result; ?>
+                            
                         </div>
                     </div>
-                </form> 
+                </form> -->
             </div>
         </div>
     </section>
