@@ -20,39 +20,39 @@
  
         // Check if name has been entered
         if (!$_POST['name']) {
-            echo 'Please enter Your name';
+            $errName = 'Please enter Your name';
             $NameErr = true;
         }
         
         // Check if email has been entered and is valid
         if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            echo '<p class="text-danger">Please enter Your real Email address! We want to write back to You!</p>';
+            $errEmail = '<p class="text-danger">Please enter Your real Email address! We want to write back to You!</p>';
             $EmailErr = true;
         }
 
         // Check if Subject has been entered
         if (!$_POST['subject']) {
-            echo '<p class="text-danger">Please select a subject!</p>';
+            $errIssue = '<p class="text-danger">Please select a subject!</p>';
             $IssueErr = true;
         }
         
         //Check if message has been entered
         if (!$_POST['message']) {
-            echo '<p class="text-danger">Please enter Your message!</p>';
+            $errMessage = '<p class="text-danger">Please enter Your message!</p>';
             $MessageErr = true;
         }
         //Check if simple anti-bot test is correct
         if ($human !== 5) {
-            echo '<p class="text-danger">Your anti-spam is incorrect!</p>';
+            $errHuman = '<p class="text-danger">Your anti-spam is incorrect!</p>';
             $HumanErr = true;
         }
  
         // If there are no errors, send the email
         if (!$NameErr && !$EmailErr && !$IssueErr && !$MessageErr && !$HumanErr) {
             if (mail ($to, $subject, $body, $from)) {
-                echo '<div class="alert alert-success">Thank You! We will be in touch with You soon!</div>';
+                $result = '<div class="alert alert-success">Thank You! We will be in touch with You soon!</div>';
             } else {
-                echo '<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+                $result = '<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
             }
         }
     }
