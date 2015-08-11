@@ -23,7 +23,7 @@ $(window).resize(function () {
 });
 
 var imageryViewModels = [];
-Cesium.BingMapsApi.defaultKey = 'AiQDjsWpddVOFEnVY6j4Jb0S0Hoy9QMa30rvbZT1A8qd0it10NkYAgvb5sa3OeLw';
+Cesium.BingMapsApi.defaultKey = 'AqGfr3XLXVjUJS_WCcBcrBxuK9kbmM5lc0I91ohget68f4DmjOtyrfXB7lAmReYE'; 
 var map_box_appendix = '?access_token=pk.eyJ1Ijoibm9zdHJhZGFtaXEiLCJhIjoiNWUyMTMzYTg1ZDAwNDJmODE0MTM4ODFjZWExZTg3YWMifQ.QTe-xdwV2fhdCrcrfbc4JA';
 
 
