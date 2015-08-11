@@ -528,6 +528,9 @@ var layers = {
             { I: "area_sqm_total", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/area_sqm_total.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Total Area (Sq.Miles) (2008)"},
             { I: "area_sqm_water", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/area_sqm_water.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Total Area Water (Sq.Miles)  (2008)"},
             { I: "area_sqm_land", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/area_sqm_land.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Total Area Land (Sq.Miles)  (2008)"},
+            { I: "energy_consumption_kwh", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/factbook_electricity_consumption.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Total Electricity Consumption (kWh) (2008)"},
+            { I: "labor_force", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/labor_force.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Labor Force (2008)"},
+            { I: "electricity_production_kwh", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/electricity_production.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Electricity Production (kWh) (2008)"},
             { I: "nasa-population", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/SEDAC_POP_2000-01-01_rgb_3600x1800.KMZ", S: "National Aeronautics and Space Administration Earth Observatory(NASA-NEO)", U: "http://neo.sci.gsfc.nasa.gov/view.php?datasetId=SEDAC_POP", N: "Population Density (NASA 2000)"}
         ]}
     }
