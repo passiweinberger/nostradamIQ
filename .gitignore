@@ -38,11 +38,11 @@ _dev/*
 # nostradamIQ-landingpage/img/TEDx.png
 
 
-nostradamIQ-webapp
-nostradamIQ-webapp/*
-nostradamIQ-webapp/*/*
-nostradamIQ-webapp/*/*/*
-nostradamIQ-webapp/*/*/*/*
+# nostradamIQ-webapp
+# nostradamIQ-webapp/*
+# nostradamIQ-webapp/*/*
+# nostradamIQ-webapp/*/*/*
+# nostradamIQ-webapp/*/*/*/*
 
 
 nostradamIQ-webapp/.idea
