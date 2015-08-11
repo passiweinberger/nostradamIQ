@@ -310,7 +310,8 @@ var layers = {
         ]},
 
         SatAnimation: { N: "Satellite Animations", icon: "globe", '>': [
-            { C: true, P: true, I: "kml-agi", T: 'kml', G: "//adn.agi.com/SatelliteDatabase/KmlNetworkLink.aspx", S: "Analytical Graphics, Inc. (AGI)", U: "//www.agi.com/resources/satdb/satdbpc.aspx", N: "Satellite Tracker"},
+            { C: true, P: true, I: "kml-agi-satellites2", T: 'kml', G: "//adn.agi.com/SatelliteDatabase/KmlNetworkLink.aspx", S: "Analytical Graphics, Inc. (AGI)", U: "//www.agi.com/resources/satdb/satdbpc.aspx", N: "Satellite Tracker"},
+            { C: true, P: true, I: "kml-agi-satellites2", T: 'kml', G: "//adn.agi.com/SatelliteDatabase/SatelliteDatabase.kmz", S: "Analytical Graphics, Inc. (AGI)", U: "//www.agi.com/resources/satdb/satdbpc.aspx", N: "Satellite Tracker2"},
             { P: true, H: true, C: true, I: "sat09", T: 'kml', G: "//tropic.ssec.wisc.edu/real-time/mosaic/movies/kml/tiles/RT.mosaic.mosaiceir.tiles.kml", S: "CIMSS/SSEC University of Wisconsin-Madison", U: "//tropic.ssec.wisc.edu/", N: "East North Atlantic Region - Infrared"},
             { P: true, H: true, C: true, I: "sat10", T: 'kml', G: "//tropic.ssec.wisc.edu/real-time/mosaic/movies/kml/tiles/RT.mosaic.mosaicewv.tiles.kml", S: "CIMSS/SSEC University of Wisconsin-Madison", U: "//tropic.ssec.wisc.edu/", N: "North Atlantic Region - Water Vapor"},
             { P: true, H: true, C: true, I: "sat11", T: 'kml', G: "//tropic.ssec.wisc.edu/real-time/mosaic/movies/kml/tiles/RT.mosaic.mosaicwir.tiles.kml", S: "CIMSS/SSEC University of Wisconsin-Madison", U: "//tropic.ssec.wisc.edu/", N: "North Pacific Region - Infrared"},
