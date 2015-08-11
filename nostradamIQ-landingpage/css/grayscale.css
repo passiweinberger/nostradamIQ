@@ -973,24 +973,18 @@ body {
 #contributors {
     max-width: 800px;
     padding-top: 10px !important;
-    text-align: left;
-}
-
-#contributors { 
-    text-align: left;
 }
 
 #contributors h1 { 
     text-align: center;
 }
 
-#contributors h3 {
-    margin: 30px 0 20px 0;
+#contributors h2 {
+    margin: 50px 0 20px 0;
     padding-bottom: 3px;
-    text-align: left;
+    text-align: center;
     font-size: 18px;
     font-family: 'heroregular';
-    border-bottom: 1px solid #E3000B;
 }
 
 #contributors p {
@@ -1003,18 +997,103 @@ body {
     line-height: 1.34;
 }
 
-#contributors ol, #resources ul {
-    margin-bottom: 20px;
-    padding: 0 0 0 25px;
-    text-align: left;
-    font-size: 16px;
+#contributors ul, #resources ul {
+    list-style: none;
     font-family: 'heroregular';
 }
 
-#contributors ol li, #resources ul li {
+#contributors ul, #resources ul li {
     margin: 10px 0 10px;
+    font-size: 18px;
 }
 
+/* ----------- people ------------- */
+
+.banner-people {
+    margin: 0 0 20px 0 !important;
+    text-align: center;
+}
+
+.banner-people li {
+    width: 220px;
+    padding: 10px;
+    display: inline-block;
+    margin: 0 3px 0 3px;
+    text-align: center;
+    vertical-align: top;
+    background-color: #111;
+}
+
+.banner-people li h4 {
+    margin: 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e3000b;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.banner-people span {
+    color: #ccc;
+    display: block;
+    font-size: 16px;
+    margin: 8px 0 10px 0;
+}
+
+.people-profile {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.people-profile a {
+    padding: 8px;
+    display: inline-block;
+    color: #555;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.people-profile a i {
+    font-size: 20px;
+}
+
+.people-profile a:hover {
+    color: white;
+}
+
+.people-profile #fb:hover {
+    background-color: #3b5998;
+}
+
+.people-profile #in:hover {
+    background-color: #0077b5;
+}
+
+.people-profile #xing:hover {
+    background-color: #026466;
+}
+
+.people-profile #github:hover {
+    background-color: #333;
+}
+
+.people-profile #behance:hover {
+    background-color: #1769ff;
+}
+
+/* ---------- organisations -------- */
+
+.org .btn {
+    border: 1px solid #111;
+    color: #ccc;
+    background-color: #111;
+    text-transform: none;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    font-weight: normal;
+    font-family: 'heroregular';
+}
 
 /* ----------------------- */
 
