@@ -1014,6 +1014,24 @@ body {
     text-align: center;
 }
 
+@media(max-width:767px) {
+    .banner-people {
+        width: 222px;
+        margin: 0 auto 20px auto !important;
+        text-align: center;
+    }
+    
+    .banner-people li {
+        margin: 0 0 20px 0 !important;
+    }
+    
+    ul.banner-social-buttons li {
+        display: inline-block !important;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+}
+
 .banner-people li {
     width: 220px;
     padding: 10px;
