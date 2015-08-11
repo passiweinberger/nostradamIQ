@@ -87,6 +87,7 @@ function NSlider(opt) {
 
     return opt.element;
 }
+
 // TODO: FIX Review!
 function loadSliders(src, layerId) {
     var target = $('#' + layerId);
@@ -112,26 +113,86 @@ function loadSliders(src, layerId) {
     loaded(layerId);
 }
 
-// TODO An extra one for markers
-/*
-function loadMarkerSliders(src, layerId) {
-    var target = $('#' + layerId);
-    var details = $('.' + layerId + '-details');
-    var label = $('<div class="slider-group-label ' + layerId + '-sliders"><i class="options icon"></i> Layer Controls</div>').appendTo(target);
-    var sPanel = $('<div class="ui card ' + layerId + '-sliders layer-sliders" />').appendTo(target);
-    var content = $('<div class="content" />').appendTo(sPanel);
-    var list = $('<div class="ui divided list" />').appendTo(content); 
 
-    NSlider({ 'label': 'opacity', 'mod': 'alpha', 'src': src }).appendTo(list);
+var defaultEyeOffset = new Cesium.Cartesian3(0.0, 50.0, 50.0);
+var defaultKMLEyeOffset = new Cesium.Cartesian3(0.0, 5000.0, 0.0);
+var defaultScaleByDistance = new Cesium.NearFarScalar(1, 0.5, 1, 0.3);
+var defaultTranslucency = new Cesium.NearFarScalar(1.5e2, 1, 3.0e6, 0);
 
-    src.gamma = 1;
-    if (details.is(':visible')) { sPanel.show(); label.show(); }
-    loaded(layerId);
+function loadError(layerId, geoDataSrc, error) {
+  console.log('loading ' + layerId + ' failed: ' + error);
+  var target = $('#' + layerId);
+  $('<div class="ui card layer-sliders" style="display:block"><div class="content"><div class="ui divided list"><div class="item"><i class="circular inverted warning icon"></i><div class="content"><div class="header">Load Failed</div>Please use <a href="mailto:info@nostradamiq.org?subject=nostradamIQ broken link in Webapp - ' + layerId + '&amp;body=Unfortunately this ( ' + geoDataSrc + ' ) URL is not working properly due to ( ' + error + ' ), please look into it.">this link</a> to report this error. Please include your Browser and OS-Version:<br><br><strong>ERROR:</strong> ' + error + '</div></div></div></div>').appendTo(target);
+    var icon = $('.' + layerId + '-load');
+    var span = $('#' + layerId + ' span');
+    icon.removeClass('spinner loading').addClass('close fail');
+    span.removeClass('active').addClass('fail');
 }
-*/
 
-// OBJECT HANDLERS:
+function newMarkerLabel(entity, markerLabel) {
+    var label = new Cesium.LabelGraphics();
+    var text;
+    if (markerLabel == 'usgs-eq') {
+        label.text = 'M' + entity.properties.mag;
+    } else if (entity.label.text) {
+        label.text = entity.label.text;
+    } else {
+        label.text = '';
+    }
+    label.horizontalOrigin = Cesium.HorizontalOrigin.CENTER;
+    label.verticalOrigin = Cesium.VerticalOrigin.BOTTOM;
+    label.outlineWidth = 5;
+    label.style = Cesium.LabelStyle.FILL_AND_OUTLINE;
+    label.translucencyByDistance = defaultTranslucency;
+    label.eyeOffset = defaultKMLEyeOffset;
+    return label;
+}
 
+function modMarkers(geoData, markerImg, markerScale, markerColor, markerLabel) {
+  var entities = geoData.entities.values; // entities = all points
+  for (var i = 0; i < entities.length; i++) {
+      var entity = entities[i]; // entities = single point
+
+      // create marker image
+      var billboard = new Cesium.BillboardGraphics();
+
+      var image;
+      if (markerImg) {
+          image = markerImg;
+      } else if (entity.billboard.image) {
+          image = entity.billboard.image;
+      } else {
+          image = '//nostradamiq.org/webapp/img/cv3D-red.png';
+      }
+      billboard.image = image;
+
+      var size;
+      if (markerLabel == 'usgs-eq') {
+          size = entity.properties.mag;
+      } else if (markerScale) {
+          size = markerScale;
+      } else {
+          size = 2;
+      }
+      billboard.scale = size;
+
+      if (markerColor) {
+        billboard.color = markerColor;
+      } else if (entity.billboard.color) {
+        billboard.color = entity.billboard.color;
+      } 
+
+      billboard.width = 32;
+      billboard.height = 32;
+      billboard.scaleByDistance = defaultScaleByDistance;
+      entity.billboard = billboard;
+      if (markerLabel) {
+          entity.label = newMarkerLabel(entity, markerLabel);
+      }
+  } // end for loop
+}
+
+// OBJECT HANDLERS BEGIN
 function updateGIBS(layerId, selectedDate) {
     removeImagery(layerId);
     var src = viewer.imageryLayers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
@@ -223,83 +284,6 @@ function loadOsmLayer(layerId, geoDataSrc, proxy, source) {
 }
 
 
-var defaultEyeOffset = new Cesium.Cartesian3(0.0, 50.0, 50.0);
-var defaultKMLEyeOffset = new Cesium.Cartesian3(0.0, 5000.0, 0.0);
-var defaultScaleByDistance = new Cesium.NearFarScalar(1, 0.5, 1, 0.3);
-var defaultTranslucency = new Cesium.NearFarScalar(1.5e2, 1, 3.0e6, 0);
-
-function loadError(layerId, geoDataSrc, error) {
-  console.log('loading ' + layerId + ' failed: ' + error);
-  var target = $('#' + layerId);
-  $('<div class="ui card layer-sliders" style="display:block"><div class="content"><div class="ui divided list"><div class="item"><i class="circular inverted warning icon"></i><div class="content"><div class="header">Load Failed</div>Please use <a href="mailto:info@nostradamiq.org?subject=nostradamIQ broken link in Webapp - ' + layerId + '&amp;body=Unfortunately this ( ' + geoDataSrc + ' ) URL is not working properly due to ( ' + error + ' ), please look into it.">this link</a> to report this error. Please include your Browser and OS-Version:<br><br><strong>ERROR:</strong> ' + error + '</div></div></div></div>').appendTo(target);
-    var icon = $('.' + layerId + '-load');
-    var span = $('#' + layerId + ' span');
-    icon.removeClass('spinner loading').addClass('close fail');
-    span.removeClass('active').addClass('fail');
-}
-
-function newMarkerLabel(entity, markerLabel) {
-    var label = new Cesium.LabelGraphics();
-    var text;
-    if (markerLabel == 'usgs-eq') {
-        label.text = 'M' + entity.properties.mag;
-    } else if (entity.label.text) {
-        label.text = entity.label.text;
-    } else {
-        label.text = '';
-    }
-    label.horizontalOrigin = Cesium.HorizontalOrigin.CENTER;
-    label.verticalOrigin = Cesium.VerticalOrigin.BOTTOM;
-    label.outlineWidth = 5;
-    label.style = Cesium.LabelStyle.FILL_AND_OUTLINE;
-    label.translucencyByDistance = defaultTranslucency;
-    label.eyeOffset = defaultKMLEyeOffset;
-    return label;
-}
-
-function modMarkers(geoData, markerImg, markerScale, markerColor, markerLabel) {
-  var entities = geoData.entities.values; // entities = all points
-  for (var i = 0; i < entities.length; i++) {
-      var entity = entities[i]; // entities = single point
-
-      // create marker image
-      var billboard = new Cesium.BillboardGraphics();
-
-      var image;
-      if (markerImg) {
-          image = markerImg;
-      } else if (entity.billboard.image) {
-          image = entity.billboard.image;
-      } else {
-          image = '//nostradamiq.org/webapp/img/cv3D-red.png';
-      }
-      billboard.image = image;
-
-      var size;
-      if (markerLabel == 'usgs-eq') {
-          size = entity.properties.mag;
-      } else if (markerScale) {
-          size = markerScale;
-      } else {
-          size = 2;
-      }
-      billboard.scale = size;
-
-      if (markerColor) {
-        billboard.color = markerColor;
-      } else if (entity.billboard.color) {
-        billboard.color = entity.billboard.color;
-      } 
-
-      billboard.width = 32;
-      billboard.height = 32;
-      billboard.scaleByDistance = defaultScaleByDistance;
-      entity.billboard = billboard;
-      if (markerLabel) {
-          entity.label = newMarkerLabel(entity, markerLabel);
-      }
-  } // end for loop
-}
 function loadGeoJson(layerId, geoDataSrc, markerLabel, markerScale, markerImg, markerColor, zoom) {
     console.log('load geojson');
     new Cesium.GeoJsonDataSource.load(geoDataSrc).then(function (geoData) {
@@ -310,12 +294,11 @@ function loadGeoJson(layerId, geoDataSrc, markerLabel, markerScale, markerImg, m
         if (zoom) {
             viewer.flyTo(geoData);
         }
-        loaded(layerId);
+        //loaded(layerId);
     }, function (error) {
         loadError(layerId, geoDataSrc, error);
     });
 }
-
 
 function loadKml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, markerLabel, markerColor, markerMod) {
     if (proxy) {
@@ -332,7 +315,7 @@ function loadKml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, marke
               if (zoom) {
                   viewer.flyTo(geoData.entities);
               }
-              loaded(layerId);
+              //loaded(layerId);
           }, function (error) {
               loadError(layerId, geoDataSrc, error);
           }
@@ -348,7 +331,7 @@ function loadKml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, marke
             if (zoom) {
                 viewer.flyTo(geoData.entities);
             }
-              loaded(layerId);
+            //loaded(layerId);
           }, function (error) {
               loadError(layerId, geoDataSrc, error);
           }
@@ -430,6 +413,8 @@ function updateLayer(layerId) {
         if (timeline) toggleTimeline(true);
     }
 }
+// OBJECT HANDLERS END
+
 // TODO get more icons !
 function newFolderLabel(l, child, ic) {
       if (ic) {
