@@ -4,8 +4,7 @@
 var baseURL = window.location.protocol + "//" + window.location.host + "/webapp/";  // production
 //var proxyURL = 'http://climateviewer.net/netj1/proxy';  // production
 //var proxyURL = 'http://localhost:8080/proxy';  // local
-var proxyURL = '//nostradamiq.org/webapp/proxy/kmz.php';  // dev
-//var proxyURL = 'kmz.php';
+var proxyURL = '//nostradamiq.org/webapp/proxy/';  // dev
 
 var activeLayers = {};
 var infoBox = $('.cesium-infoBox');
@@ -113,7 +112,8 @@ function loadSliders(src, layerId) {
     loaded(layerId);
 }
 
-// TODO FIX
+// TODO An extra one for markers
+/*
 function loadMarkerSliders(src, layerId) {
     var target = $('#' + layerId);
     var details = $('.' + layerId + '-details');
@@ -125,8 +125,10 @@ function loadMarkerSliders(src, layerId) {
     NSlider({ 'label': 'opacity', 'mod': 'alpha', 'src': src }).appendTo(list);
 
     src.gamma = 1;
-    if (details.is(':visible')) sPanel.show();
+    if (details.is(':visible')) { sPanel.show(); label.show(); }
+    loaded(layerId);
 }
+*/
 
 // OBJECT HANDLERS:
 
@@ -304,7 +306,7 @@ function loadGeoJson(layerId, geoDataSrc, markerLabel, markerScale, markerImg, m
         modMarkers(geoData, markerImg, markerScale, markerColor, markerLabel);
         viewer.dataSources.add(geoData);
         activeLayers[layerId] = geoData;
-        loadMarkerSliders(geoData, layerId);
+        loadSliders(geoData, layerId);
         if (zoom) {
             viewer.flyTo(geoData);
         }
@@ -326,7 +328,7 @@ function loadKml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, marke
               }
               viewer.dataSources.add(geoData); // add to map
               activeLayers[layerId] = geoData; // store for removal
-              loadMarkerSliders(geoData, layerId);
+              loadSliders(geoData, layerId);
               if (zoom) {
                   viewer.flyTo(geoData.entities);
               }
@@ -342,7 +344,7 @@ function loadKml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, marke
             } // end markerMod
             viewer.dataSources.add(geoData);
             activeLayers[layerId] = geoData;
-            loadMarkerSliders(geoData, layerId);
+            loadSliders(geoData, layerId);
             if (zoom) {
                 viewer.flyTo(geoData.entities);
             }

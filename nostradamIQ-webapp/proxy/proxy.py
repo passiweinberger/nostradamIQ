@@ -33,13 +33,10 @@ def app(environ, start_response):
 def getDocByUrl(url):
     cached = False
     db = TinyDB('cache.json')
-    #print(datetime.datetime.today().timestamp())
-    ago = datetime.datetime.now() - datetime.timedelta(minutes=CACHE_MIN)
-    ago = int((ago-datetime.datetime(1970,1,1)).total_seconds())#.timestamp())
+    ago = int(((datetime.datetime.now() - datetime.timedelta(minutes=CACHE_MIN)) - datetime.datetime(1970,1,1)).total_seconds())#.timestamp())
     print(ago)
     db.remove(where('date') < ago)
     search = db.search((where('url') == url) & (where('date') > ago))
-    #print()
     if len(search) > 0:
         cached = True
     if cached:
