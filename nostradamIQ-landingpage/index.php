@@ -209,8 +209,8 @@
                     <p>If you want to help, but do not feel like coding, please share this message to motivate others to do so!</p>
                     <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JH4BWPHA326TL" target="_blank"  rel="nofollow" class="btn btn-default btn-lg" title="PayPal Link"><i class="fa fa-paypal fa-fw"></i> <span class="network-name">Donate</span></a><br>
-                        <b>Thank you for your support.</b> <i class="fa fa-heart fa-fw"></i>
+                        <a href="//www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JH4BWPHA326TL" target="_blank"  rel="nofollow" class="btn btn-default btn-lg" title="PayPal Link"><i class="fa fa-paypal fa-fw"></i> <span class="network-name">Donate</span></a><br>
+                        <span>Thank you for your support. <i class="fa fa-heart fa-fw"></i></span>
                     </li>
                     </ul>
                     <p>Translators, are also <strong>urgently</strong> needed, to provide the entire World with relevant information!<br>So if YOU are bilingual, please <a href="mailto:info@nostradamiq.org" target="_blank">let us know and help!</a></p>
@@ -297,8 +297,8 @@
                         <a href="//twitter.com/nostradamIQ" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Tweet Us!</span></a>
                     </li>
                     <li>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JH4BWPHA326TL" target="_blank"  rel="nofollow" class="btn btn-default btn-lg" title="PayPal Link"><i class="fa fa-paypal fa-fw"></i> <span class="network-name">Donate</span></a><br>
-                        <b>Thank you for your support.</b> <i class="fa fa-heart fa-fw"></i>
+                        <a href="//www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JH4BWPHA326TL" target="_blank"  rel="nofollow" class="btn btn-default btn-lg" title="PayPal Link"><i class="fa fa-paypal fa-fw"></i> <span class="network-name">Donate</span></a><br>
+                        <span>Thank you for your support. <i class="fa fa-heart fa-fw"></i></span>
                     </li>
                 </ul>
                 
@@ -514,10 +514,6 @@ function googleTranslateElementInit() {
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
- 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ 
-    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=true"></script>
-    -->
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
