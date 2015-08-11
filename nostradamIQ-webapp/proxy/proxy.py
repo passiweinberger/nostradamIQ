@@ -8,7 +8,7 @@ import base64
 import datetime
 from tinydb import TinyDB, where
 
-FILTER = True
+FILTER = False
 CACHE_MIN = 5
 
 
@@ -28,10 +28,11 @@ def app(environ, start_response):
         if valid:
             return getDocByUrl(url)
     return ""
+
+
 def getDocByUrl(url):
     cached = False
     db = TinyDB('cache.json')
-
     #print(datetime.datetime.today().timestamp())
     ago = datetime.datetime.now() - datetime.timedelta(minutes=CACHE_MIN)
     ago = int((ago-datetime.datetime(1970,1,1)).total_seconds())#.timestamp())
@@ -49,6 +50,8 @@ def getDocByUrl(url):
         date = int((datetime.datetime.now()-datetime.datetime(1970,1,1)).total_seconds())#.timestamp())
         db.insert({'url':url,'date':date, 'content':base64.b64encode(req.content)})
         return req.content
+
+
 WSGIServer(app).run()
 
 """

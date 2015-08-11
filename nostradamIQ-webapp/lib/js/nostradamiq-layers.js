@@ -531,6 +531,10 @@ var layers = {
             { I: "energy_consumption_kwh", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/factbook_electricity_consumption.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Total Electricity Consumption (kWh) (2008)"},
             { I: "labor_force", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/labor_force.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Labor Force (2008)"},
             { I: "electricity_production_kwh", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/electricity_production.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Electricity Production (kWh) (2008)"},
+            { I: "access_to_electricity", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/access_to_electricity.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Electricity Access (in % of Polpulation) (2008)"},
+            { I: "electricity_consumption_perCap", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/electricity_consumption_perCap.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Electricity Consumption (per Capita) (2005)"},
+            { I: "total_CO2_emission", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/total_CO2_emission.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Total CO2 emissions including LULUCF/LUCF (2006"},
+            { I: "total_CO2_emission", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/co2_emission_perCap_tons.kmzco2_emission_perCap_tons.kmz", S: "CIA: Wold-Fact-Book (2008)", U: "http://www.kmlfactbook.org/", N: "Total CO2 emissions including LULUCF/LUCF per Capita (tons) (2006"},
             { I: "nasa-population", P: true, T: 'kml', G: "/webapp/layers/kml/3rdparty/humanitarian/SEDAC_POP_2000-01-01_rgb_3600x1800.KMZ", S: "National Aeronautics and Space Administration Earth Observatory(NASA-NEO)", U: "http://neo.sci.gsfc.nasa.gov/view.php?datasetId=SEDAC_POP", N: "Population Density (NASA 2000)"}
         ]}
     }
