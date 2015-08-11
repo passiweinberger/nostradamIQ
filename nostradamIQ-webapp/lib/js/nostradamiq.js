@@ -366,6 +366,7 @@ terrainProviders.push(new Cesium.ProviderViewModel({
 var now = Cesium.JulianDate.now();
 var clock = new Cesium.Clock({currentTime: now});
 var viewer;
+var scene;
 
 // If Mobile start in 2D scene mode for increased performance
 if ($('body').hasClass('mobile')) {
@@ -383,6 +384,7 @@ if ($('body').hasClass('mobile')) {
         terrainProvider: false,
         skyAtmosphere: false,
         skyBox: false,
+        moon: false,
         targetFrameRate: 15
     });
 } else {
@@ -396,14 +398,35 @@ if ($('body').hasClass('mobile')) {
         navigationInstructionsInitiallyVisible: false,
         imageryProvider: false,
         baseLayerPicker: false,
+        moon: true,
         clock: clock,
         terrainProvider: false,
         targetFrameRate: 20
     });
+
+    // better Moon Picture: 
+    viewer.scene.moon = new Cesium.Moon({ 
+        textureUrl: '/webapp/lib/cesium/1.12/Assets/Textures/moonSmall.jpg', 
+        onlySunLightning: false 
+    });
+    // better Stars: WARNING! LOTS OF WORK! 
+// /*
+    viewer.scene.skyBox = new Cesium.SkyBox({
+        positiveX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_px.jpg',
+        negativeX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mx.jpg',
+        positiveY : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_py.jpg',
+        negativeY : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_my.jpg',
+        positiveZ : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_pz.jpg',
+        negativeZ : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mz.jpg'
+    });
+
+// */
 }
 $('.cesium-viewer-animationContainer').hide();
 $('.cesium-viewer-timelineContainer').hide();
 $('.cesium-viewer-bottom').hide();
+
+
 
 // WatchDog for lowFPS:
 viewer.extend(Cesium.viewerPerformanceWatchdogMixin, {
@@ -417,20 +440,6 @@ var baseLayerPicker = new Cesium.BaseLayerPicker('baseLayerPickerContainer', {
     imageryProviderViewModels: imageryViewModels,
     terrainProviderViewModels: terrainProviders
 });
-
-// better Moon Picture: 
-scene.moon.textureUrl = '/webapp/lib/cesium/1.12/Assets/Textures/moonSmall.jpg';
-
-// better Stars: WARNING! LOTS OF WORK! 
-scene.skyBox = new SkyBox({
-  positiveX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_px.jpg',
-  negativeX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mx.jpg',
-  positiveY : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_py.jpg',
-  negativeY : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_my.jpg',
-  positiveZ : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_pz.jpg',
-  negativeZ : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mz.jpg'
-});
-
 
 // Geolocate User and zoom to position: TODO With button and show where you are!
 function showAndFlyPosition(position) {
