@@ -410,7 +410,7 @@ if ($('body').hasClass('mobile')) {
         onlySunLightning: false 
     });
     // better Stars: WARNING! LOTS OF WORK! 
-// /*
+/*
     viewer.scene.skyBox = new Cesium.SkyBox({
         positiveX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_px.jpg',
         negativeX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mx.jpg',
@@ -420,7 +420,7 @@ if ($('body').hasClass('mobile')) {
         negativeZ : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mz.jpg'
     });
 
-// */
+*/
 }
 $('.cesium-viewer-animationContainer').hide();
 $('.cesium-viewer-timelineContainer').hide();

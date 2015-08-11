@@ -339,6 +339,45 @@ function loadKml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, marke
     } // end proxy
 }
 
+function loadCZML(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, markerLabel, markerColor, markerMod) {
+    if (proxy) {
+        new Cesium.CzmlDataSource.load(geoDataSrc, {
+            proxy: new Cesium.DefaultProxy(proxyURL),
+            sourceUri: geoDataSrc
+          }).then(function (geoData) {
+              if (markerMod) {
+                  modMarkers(geoData, markerImg, markerScale, markerLabel);
+              }
+              viewer.dataSources.add(geoData); // add to map
+              activeLayers[layerId] = geoData; // store for removal
+              loadSliders(geoData, layerId);
+              if (zoom) {
+                  viewer.flyTo(geoData.entities);
+              }
+              //loaded(layerId);
+          }, function (error) {
+              loadError(layerId, geoDataSrc, error);
+          }
+        ); // end then
+    } else {
+        new Cesium.CzmlDataSource.load(geoDataSrc).then(function (geoData) {
+            if (markerMod) {
+                  modMarkers(geoData, markerImg, markerScale, markerLabel);
+            } // end markerMod
+            viewer.dataSources.add(geoData);
+            activeLayers[layerId] = geoData;
+            loadSliders(geoData, layerId);
+            if (zoom) {
+                viewer.flyTo(geoData.entities);
+            }
+            //loaded(layerId);
+          }, function (error) {
+              loadError(layerId, geoDataSrc, error);
+          }
+        ); // end then
+    } // end proxy
+}
+
 // REMOVE IMAGERY LAYERS (WMS, WMTS)
 function removeImagery(layerId) {
     var src = activeLayers[layerId];
@@ -406,6 +445,8 @@ function updateLayer(layerId) {
             loadGeoJson(layerId, geoDataSrc, markerLabel, markerScale, markerImg, markerColor, zoom);
         } else if (l.T === ('kml')) {
             loadKml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, markerLabel, markerColor, markerMod);
+        } else if (l.T === ('czml')) {
+            loadCzml(layerId, geoDataSrc, proxy, zoom, markerImg, markerScale, markerLabel, markerColor, markerMod);
         } else {
             console.log(layerId + ' failed to load map type: ' + l.T);
         }
