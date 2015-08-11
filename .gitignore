@@ -48,3 +48,8 @@ _dev/*
 nostradamIQ-webapp/.idea
 nostradamIQ-webapp/.idea/
 nostradamIQ-webapp/.idea/*
+
+nostradamIQ-webapp/cesium-leap
+nostradamIQ-webapp/cesium-leap/*
+nostradamIQ-webapp/cesium-leap/*/*
+
