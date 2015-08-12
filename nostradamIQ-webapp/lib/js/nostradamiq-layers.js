@@ -467,7 +467,7 @@ var layers = {
             { I: "gmo-cm-t", T: 'kml', S: "Google-Maps Overlays", G: "/webapp/layers/kml/3rdparty/cloudmade-tourist-overlay-for-google-earth.kmz", U: "http://ge-map-overlays.appspot.com/", N: "Cloud-Made Tourist (GoogleMaps-Overlay)"}
         ]},
         Flight: { N: "Flight", icon: "plane", '>': [
-            { C: true, I: "kml-fwi", T: 'kml', G: "//mw1.google.com/mw-earth-vectordb/flightwise/flightwise_root.kml", S: "Flightwise", U: "//flightwise.com/", N: "Current Flights"},
+            { P: true, C: true, I: "kml-fwi", T: 'kml', G: "//mw1.google.com/mw-earth-vectordb/flightwise/flightwise_root.kml", S: "Flightwise", U: "//flightwise.com/", N: "Current Flights"},
             { C: true, I: "kml-fwc", T: 'kml', G: "//flightwise.com/kml/FlightTracker.kmz", S: "Flightwise.com", U: "//flightwise.com/", N: "International Flights"},
             { I: "us_runways", T: 'wms', G: "//nowcoast.noaa.gov/wms/com.esri.wms.Esrimap/obs", L: "us_runways", S: "NOAA Ocean Service's nowCOAST's Map Services - Locations/Footprints of U.S. Airport Runways", U: "//nowcoast.noaa.gov/help/mapservices.shtml", N: "U.S. Airport Runways"},
             { I: "artcc", T: 'wms', G: "//nowcoast.noaa.gov/wms/com.esri.wms.Esrimap/obs", L: "artcc", S: "NOAA Ocean Service's nowCOAST's Map Services - Air Route Traffic Control Centers - Areas of Responsibility", U: "//nowcoast.noaa.gov/help/mapservices.shtml", N: "Air Route Traffic Control Center Boundaries"}

@@ -423,13 +423,9 @@ def urljoin(base, url, allow_fragments=True):
 
         return base
 
-    bscheme, bnetloc, bpath, bparams, bquery, bfragment = \
+    bscheme, bnetloc, bpath, bparams, bquery, bfragment = urlparse(base, '', allow_fragments)
 
-            urlparse(base, '', allow_fragments)
-
-    scheme, netloc, path, params, query, fragment = \
-
-            urlparse(url, bscheme, allow_fragments)
+    scheme, netloc, path, params, query, fragment = urlparse(url, bscheme, allow_fragments)
 
     if scheme != bscheme or scheme not in uses_relative:
 
