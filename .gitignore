@@ -53,3 +53,10 @@ nostradamIQ-webapp/cesium-leap
 nostradamIQ-webapp/cesium-leap/*
 nostradamIQ-webapp/cesium-leap/*/*
 
+nostradamIQ-webapp/proxy/cors-anywhere
+nostradamIQ-webapp/proxy/cors-anywhere/*
+nostradamIQ-webapp/proxy/cors-anywhere/*/*
+
+nostradamIQ-webapp/proxy/node-http-proxy
+nostradamIQ-webapp/proxy/node-http-proxy/*
+nostradamIQ-webapp/proxy/node-http-proxy/*/*
