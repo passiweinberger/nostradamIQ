@@ -415,7 +415,7 @@ div.cesium-baseLayerPicker-sectionTitle:not(:first-child) {
 }
 
 /* CONTROL BUTTONS */
-div.cv-toolbar {
+.cv-toolbar {
 	position:fixed;
 	top:64px;
 	right:0;
@@ -520,7 +520,7 @@ iframe.cesium-infoBox-iframe {
 	top:0;
 	right:0;
 	left:auto;
-	z-index:3;
+	z-index:5;
 	background:rgba(0,0,0,0.7);
 	display:none;
 }
@@ -1404,7 +1404,9 @@ div#disqus_thread {
 }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
+
+/* ----------------- Logo ------------ */
 .ui.feed.cv3d {
 	top:auto;
 	bottom:5px;
@@ -1417,7 +1419,8 @@ div#disqus_thread {
 .ui.feed.cv3d>.event>.content .summary span.slogan {
 	display:none;
 }
-
+    
+/* -------------- Toolbox ---------------- */
 .toolbar {
 	width:100%;
 }
@@ -1430,10 +1433,37 @@ div#disqus_thread {
 	width:100%!important;
 }
 
-button.ui.button.cv-button span {
+/* -------------- Nav collapsed ----------*/
+.cv-toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    display: none;
+    background: red;
+}
+    
+button.ui.button.cv-button {
+    padding: .87em !important;
+    text-align: left;
+    background: #a51717 !important;
+}
+    
+.ui.vertical.buttons .button:last-child {
+    border-radius: 0 !important;
+}
+    
+button.ui.button.cv-button:focus,
+button.ui.button.cv-button:hover   {
+    background-color: #333 !important;
+    color: #fff;
+}
+    
+.ui.button.cv-button span {
 	display:none;
 }
-
+/* ------------ */
+    
 #Greeting .header {
 	font-size:1.2em;
 }
