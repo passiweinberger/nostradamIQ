@@ -46,6 +46,7 @@ class StdOutListener(StreamListener):
         # convert and write as geoJSON:
         with open(outputgeo, 'a+') as outPgeo:
             outPgeo.write(str(format2geoJSON(tweet)))
+            outPgeo.write('\n')
         outPgeo.close()
 
         return True

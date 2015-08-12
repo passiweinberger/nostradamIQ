@@ -185,6 +185,10 @@ var layers = {
                 { I: "kml-es4dtec", T: 'kml', G: "//sol.spacenvironment.net/~ionops/kml_files/ES4D_ionops_TEC.kml", S: "Communcation Alert and Prediction Center (CAPS) / Earth Space 4D (ES4D) Ionops, Utah State University", U: "//sol.spacenvironment.net/~ionops/", N: "Total Electron Content"},
                 { C: true, I: "kml-es4dteca", T: 'kml', G: "//sol.spacenvironment.net/~ionops/kml_files/ES4D_TEC_anim_Ionops.kml", S: "Communcation Alert and Prediction Center (CAPS) / Earth Space 4D (ES4D) Ionops, Utah State University", U: "//sol.spacenvironment.net/~ionops/", N: "Total Electron Content (animated)"}
         ]},
+        Twitter: { N: "Twitter Stream Listener", icon: "twitter", '>': [
+                // TODO Link to goeJSONs for various twitter streams:
+                { I: "twitter-quake", C: true, T: 'geojson', G: "/webapp/layers/geojson/twitter/quake.geojson", MI: "/webapp/img/twitter-icon.png", S:"nostradamIQ's own Twitter Listeners" N: "Twitter Stream containing #quake" }
+        ]},
         Report: {  N: "Climate Viewer Reports", icon: "bullhorn", '>': [
                 { NL: true, I: "cvr01", T: 'kml', M: true, MS: "2", G: "/webapp/layers/kml/cv-reports/cv-reports-0415.kml", S: "Climate Viewer Reports", U: "https://climateviewer.crowdmap.com/", N: "CV Reports - 2011 - 2015"}
         ]},
