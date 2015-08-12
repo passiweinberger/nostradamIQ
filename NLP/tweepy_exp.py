@@ -24,16 +24,19 @@ class StdOutListener(StreamListener):
         tweet = json.loads(data)
 
         if self.count == CUTOFF : exit(0)
-        # only show english tweets:
+
+        # only show english & german tweets with geo location and or place defined: TODO
+        """
         if ("lang" in tweet["user"]) and (tweet["user"]["lang"] == "en" or tweet["user"]["lang"] == "de") and ("geo" in tweet or "place" in tweet):
-            if (not "geo" in tweet):
+            if (not "geo" in tweet.keys()):
                 print( '@%s tweeted: %s\nPlace: %s\n' % ( tweet['user']['screen_name'], tweet['text'], tweet["place"]) )
-            elif (not "place" in tweet):
+            elif (not "place" in tweet.keys()):
                 print( '@%s tweeted: %s\nlat, lng: %s\n' % ( tweet['user']['screen_name'], tweet['text'], tweet["geo"][0], tweet["geo"][1] ) )
             else:
                 print( '@%s tweeted: %s\nPlace, lat, lng: %s, %s\n' % ( tweet['user']['screen_name'], tweet['text'], tweet["place"], tweet["geo"][0], tweet["geo"][1] ) )
-
-	    self.count += 1
+        """
+        print('@%s tweeted: %s\nPlace: %s (%s)\n' % ( tweet['user']['screen_name'], tweet['text'], tweet['place'], tweet['geo']))
+        self.count += 1
 
         # write to .txt file
         with open(outputfile, 'a+') as outP:
@@ -42,7 +45,7 @@ class StdOutListener(StreamListener):
         outP.close()
         # convert and write as geoJSON:
         with open(outputgeo, 'a+') as outPgeo:
-            outPgeo.write(format2geoJSON(tweet))
+            outPgeo.write(str(format2geoJSON(tweet)))
         outPgeo.close()
 
         return True
