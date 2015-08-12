@@ -7,10 +7,14 @@ from tweepy import Stream
 import json
 import re
 import sys
+from tweet2geoJSON import format2geoJSON
 
 from API_KEYS import consumer_key, consumer_secret, access_token, access_token_secret
 
 CUTOFF = -1
+
+outputfile = "tweets.txt"
+outputgeo = "tweets.geojson"
 
 class StdOutListener(StreamListener):
 
@@ -20,10 +24,26 @@ class StdOutListener(StreamListener):
         tweet = json.loads(data)
 
         if self.count == CUTOFF : exit(0)
+        # only show english tweets:
+        if ("lang" in tweet["user"]) and (tweet["user"]["lang"] == "en" or tweet["user"]["lang"] == "de") and ("geo" in tweet or "place" in tweet):
+            if (not "geo" in tweet):
+                print( '@%s tweeted: %s\nPlace: %s\n' % ( tweet['user']['screen_name'], tweet['text'], tweet["place"]) )
+            elif (not "place" in tweet):
+                print( '@%s tweeted: %s\nlat, lng: %s\n' % ( tweet['user']['screen_name'], tweet['text'], tweet["geo"][0], tweet["geo"][1] ) )
+            else:
+                print( '@%s tweeted: %s\nPlace, lat, lng: %s, %s\n' % ( tweet['user']['screen_name'], tweet['text'], tweet["place"], tweet["geo"][0], tweet["geo"][1] ) )
 
-        if "lang" in tweet["user"] and tweet["user"]["lang"] == "en":
-            print "\t".join([tweet["text"],tweet["user"]["screen_name"]]).encode('ascii', 'ignore').replace('\n', ' ')
 	    self.count += 1
+
+        # write to .txt file
+        with open(outputfile, 'a+') as outP:
+                outP.write(str(tweet)) 
+                outP.write('\n')
+        outP.close()
+        # convert and write as geoJSON:
+        with open(outputgeo, 'a+') as outPgeo:
+            outPgeo.write(format2geoJSON(tweet))
+        outPgeo.close()
 
         return True
 
@@ -38,12 +58,12 @@ if __name__ == '__main__':
     stream = Stream(auth, l)
 
     if len(sys.argv) < 2 : 
-	print 'USAGE : python get_tweets.py [n] [keyword1 keyword2 ... keywordn]'
+	print 'USAGE : python get_tweets.py [n: CUTOFF] [keyword1 keyword2 ... keywordn]'
 	exit(0)
 
     try : 
 	CUTOFF = int(sys.argv[1])
-    	company_names = sys.argv[2:]
-    except : company_names = sys.argv[1:]
+    	queries = sys.argv[2:]
+    except : queries = sys.argv[1:]
 
-    stream.filter(track=company_names)
+    stream.filter(track=queries)
