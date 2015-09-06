@@ -1,5 +1,7 @@
 "use strict";
 
+var WATCHDOG = false;
+
 // Check for mobile devices, set body class accordingly
 function resize() {
     var clientWidth = $(window).width(),
@@ -385,6 +387,7 @@ if ($('body').hasClass('mobile')) {
         moon: false,
         targetFrameRate: 15
     });
+    var currentViewModel = '2D';
 } else {
     // is desktop
     viewer = new Cesium.Viewer('cesiumContainer', {
@@ -401,38 +404,24 @@ if ($('body').hasClass('mobile')) {
         terrainProvider: false,
         targetFrameRate: 20
     });
-
+    var currentViewModel = '3D';
     // better Moon Picture: 
     viewer.scene.moon = new Cesium.Moon({ 
         textureUrl: '/webapp/lib/cesium/Cesium/Assets/Textures/moonSmall.jpg', 
         onlySunLightning: false 
     });
-
-    // better Stars: WARNING! LOTS OF WORK! 
-/*
-    viewer.scene.skyBox = new Cesium.SkyBox({
-        positiveX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_px.jpg',
-        negativeX : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mx.jpg',
-        positiveY : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_py.jpg',
-        negativeY : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_my.jpg',
-        positiveZ : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_pz.jpg',
-        negativeZ : '/webapp/lib/cesium/cesium-assets/stars/TychoSkymapII.t3_08192x04096/TychoSkymapII.t3_08192x04096_80_mz.jpg'
-    });
-
-*/
 }
 
 $('.cesium-viewer-animationContainer').hide();
 $('.cesium-viewer-timelineContainer').hide();
 $('.cesium-viewer-bottom').hide();
 
-
-
 // WatchDog for lowFPS:
-viewer.extend(Cesium.viewerPerformanceWatchdogMixin, {
-    lowFrameRateMessage : 'Why is this going so <em>slowly</em>?'
-});
-
+if (WATCHDOG) {
+    viewer.extend(Cesium.viewerPerformanceWatchdogMixin, {
+        lowFrameRateMessage : 'nostradamIQ appears <em>slow</em>?<p onclick="$(".mode-2d").trigger("click");">Try a light-weight 2D-Version!</p>'
+    });
+}
 
 // add baseLayerPicker
 var baseLayerPicker = new Cesium.BaseLayerPicker('baseLayerPickerContainer', {
@@ -452,9 +441,9 @@ function fly(position) {
                 }
             });
 }
-
 function showAndFlyPosition(position) {
-    document.getElementById('geolocation-window').innerHTML = "<i><b>Your Position:</b><br>Lat: "+Number((position.coords.latitude).toFixed(3))+"<br>Lng: "+Number((position.coords.longitude).toFixed(3)+"</i><br><button onclick='fly()'>Fly Me there!</button> ");
+    fly(position);
+    $('#geolocation-window').innerHTML = "<i><b>Your Position:</b><br>Latitude: "+Number((position.coords.latitude).toFixed(3))+"<br>Longitude: "+Number((position.coords.longitude).toFixed(3)+"</i><br><button onclick='fly()'>FLY ME THERE!</button>");
 }
 function showError(error) {
     $('#geolocation-window').hide();
@@ -475,6 +464,10 @@ function showError(error) {
 }
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showAndFlyPosition, showError);
+        console.log("Geolocation started...");
+        navigator.geolocation.getCurrentPosition(showAndFlyPosition, showError);
+        //navigator.geolocation.watchPosition(showAndFlyPosition, showError);
+    } else {
+        console.log("Geolocation failed! Your System does not support this Service!");
     }
 }

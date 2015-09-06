@@ -145,12 +145,6 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="//github.com/nupic-community/nostradamIQ/blob/master/CONTRIBUTING.md" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> Contribute now</a>
-                    </li>
-                </ul>
-                
                 <h2>About nostradam<i>IQ</i></h2>
                 <p>How can we sense our World's disasters in advance?</p>
                 <div class="video-container">
@@ -488,8 +482,8 @@
                     <i class="fa fa-fw"></i></a>
             </li><li><a id="in" href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fnostradamiq.org%2F&title=nostradamIQ%20-%20Sensing%20our%20World%27s%20disasters&source=nostradamIQ" target="_blank">
                     <i class="fa fa-fw"></i></a>
-            </li><li><a id="xing" href="//www.xing.com/spi/shares/new?url=http%3A%2F%2Fnostradamiq.org%2F" target="_blank">
-                    <i class="fa fa-fw"></i></a>
+            <!-- </li><li><a id="xing" href="//www.xing.com/spi/shares/new?url=http%3A%2F%2Fnostradamiq.org%2F" target="_blank">
+                    <i class="fa fa-fw"></i></a> -->
             </li><li><a id="reddit" href="//www.reddit.com/submit?url=http%3A%2F%2Fnostradamiq.org%2F&title=nostradamIQ%20-%20Sensing%20our%20World%27s%20disasters" target="_blank">
                     <i class="fa fa-fw"></i></a>
             </li><li><a id="pin" href="//pinterest.com/pin/create/bookmarklet/?media=http%3A%2F%2Fnostradamiq.org%2Fimg%2Fintro_bg.jpg&url=http%3A%2F%2Fnostradamiq.org%2F&is_video=false&description=nostradamIQ%20-%20Sensing%20our%20World%27s%20disasters" target="_blank">

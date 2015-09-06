@@ -14,6 +14,19 @@ body {
 	background:#3d3d3d!important;
 }
 
+div#preload-wrapper {
+  height: 100%;
+  width: 100%;
+  background: #444;
+}
+
+div#preload {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 strong {
 	font-weight:700;
 }
@@ -529,6 +542,40 @@ button.ui.button.cv-button:focus span,button.ui.button.cv-button:hover span {
     /* ------------ */
 }
 
+
+ul.banner-social-buttons2 {
+    margin-top: 0;
+    list-style-type: none;
+}
+
+ul.banner-social-buttons2 li {
+    margin-bottom: 10px;
+}
+
+ul.banner-social-buttons2 li a {
+    max-width: 100% !important;
+    white-space: normal;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons2 {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons2 li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons2 li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
 .banner-social-buttons {
     padding: 0px;
     list-style: none;
@@ -539,6 +586,7 @@ button.ui.button.cv-button:focus span,button.ui.button.cv-button:hover span {
     width: 80px;
     text-align: center;
     margin: 4px 5px;
+    padding: 0 0 5px 0;
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
@@ -566,9 +614,11 @@ button.ui.button.cv-button:focus span,button.ui.button.cv-button:hover span {
 }
 
 .banner-social-buttons li:hover {
-    background-color: #FF7214;
+    background-color: #2F393F;
     color: #fff;
 }
+
+
 
 /* --------------------- MAP INFO WINDOW ------------------------ */
 .cesium-viewer-toolbar {
@@ -653,16 +703,78 @@ div.map-layers div.folder div.folder {
 	border-bottom: 0px;
 }
 
+div.showcase-maps-info {
+	background:#1C2226;
+    color: #eee !important;
+	margin:0;
+	padding:10px 10px 0;
+	border-bottom: 0px;
+}
+
+div.showcase-maps {
+	background:#1C2226;
+    color: #eee !important;
+	margin:0;
+	padding:10px 0;
+	border-bottom: 0px;
+}
+
+div.showcase-maps div {
+    margin: 10px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.ui.tab.segment.active h5 {
+	margin:2px 20px;
+	text-align:center;
+}
+
+.ui.tab.segment.active h3 {
+	display:block;
+	font-family:sans-serif;
+	color:#FF7214;
+	margin:11px;
+	padding:9px;
+	padding-top: 10px;
+	font-size:1.2rem;
+	text-transform:uppercase;
+	font-weight:700;
+	border:1px solid rgba(255,255,255,0.2);
+	text-align:center;
+}
+
+.ui.tab.segment.active h4 {
+	display:block;
+	font-family:sans-serif;
+	color:#999;
+	margin:11px;
+	padding:9px;
+	padding-top: 10px;
+	font-size:.8rem;
+	text-transform:uppercase;
+	font-weight:700;
+	border:1px solid rgba(255,255,255,0.2);
+	text-align:center;
+}
+
+
 div.legend {
     color: #EEE;
+    background:#1C2226;
     padding: 0px 4% 20px 4%;
+    overflow-x: hidden;
     /* display: none; */
 }
 
 .tabmenu-body {
-	width:420px!important;
+	width:420px!important; 
 	margin:0;
 	overflow:auto;
+	overflow-x: hidden;
 	-webkit-overflow-scrolling:touch;
 	-moz-overflow-scrolling:touch;
 	-ms-overflow-scrolling:touch;
@@ -680,6 +792,13 @@ div.legend {
 	width:420px!important;
     border-top: 1px solid #FF7214;
     border-radius: 0px !important;
+	overflow:auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling:touch;
+	-moz-overflow-scrolling:touch;
+	-ms-overflow-scrolling:touch;
+	-o-overflow-scrolling:touch;
+	overflow-scrolling:touch;
 }
 
 .tabmenu-footer.ui.cv-button-group .ui.button.cv-button {
@@ -977,6 +1096,14 @@ i.circular.inverted.info.icon,i.circular.inverted.download.icon,i.circular.inver
 i.circular.inverted.warning.icon {
 	background-color:#CC1414!important;
 	font-size:2em;
+}
+
+i.icon.new-layer {
+    color: #2ECC40;
+}
+
+i.icon.large-layer {
+    color: #FF4335;
 }
 
 .layer-sliders .header {
